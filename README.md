@@ -7,5 +7,5 @@ I'm Yery, I am 21 years old. I'm lousy to introduce myself 😅. I like programm
 
 ### Santiago Téllez
 
-I'm Santiago, I'm 22 years old. Im' an engineer student in Bogotá. I like videogames and movies, also   languages like german. 
+I'm Santiago, I'm 22 years old. I'm an engineer student in Bogotá. I like video games and movies, also languages like german. 
 
