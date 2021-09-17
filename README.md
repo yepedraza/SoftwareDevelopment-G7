@@ -9,3 +9,5 @@ I'm Yery, I am 21 years old. I'm lousy to introduce myself 😅. I like programm
 
 I'm Santiago, I'm 22 years old. I'm an engineer student in Bogotá. I like video games and movies, also languages like german. 
 
+### Andrea Amaya
+I am a statistician, I am from Bogota and I like to read and spend time with my family and friends.
