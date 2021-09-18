@@ -11,3 +11,8 @@ I'm Santiago, I'm 22 years old. I'm an engineer student in Bogotá. I like video
 
 ### Andrea Amaya
 I am a statistician, I am from Bogota and I like to read and spend time with my family and friends.
+
+### Daniel Sanchez
+
+I'm Daniel,I am 21 years old, I like playing volleyball, videogames and movies, I am finishing my studies as an mechatronics engineer.
+
