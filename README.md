@@ -16,3 +16,5 @@ I am a statistician, I am from Bogota and I like to read and spend time with my 
 
 I'm Daniel,I am 21 years old, I like playing volleyball, videogames and movies, I am finishing my studies as an mechatronics engineer.
 
+### Gabriela Herrera
+I'm a 25 years old chemical engineer. I like to walk and spend time with my family.
