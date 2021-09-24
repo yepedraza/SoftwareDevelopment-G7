@@ -1,0 +1,59 @@
+*, :before, :after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header .MainContainer {
+  display: block;
+  background-color: aqua;
+  height: 48px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+header .LeftBar {
+  margin-left: 2em;
+  height: 100%;
+  width: auto;
+  background-color: red;
+  display: flex;
+}
+header .NavDiv {
+  background-color: #eeff00;
+  height: 100%;
+  width: 200px;
+}
+header .NavDiv ul, header .NavDiv ol {
+  list-style: none;
+}
+header .NavDiv .NavMenu li a {
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  width: 200px;
+  padding: 10px 15px;
+  display: block;
+}
+header .NavDiv .NavMenu li a:hover {
+  background-color: gray;
+  color: black;
+}
+header .NavDiv .NavMenu li ul {
+  display: none;
+}
+header .BrandLogo {
+  height: 100%;
+  width: 120px;
+  background-color: orangered;
+}
+header .LoggedAccount {
+  margin-right: 2em;
+  background-color: violet;
+  float: right;
+  right: 10px;
+  height: 100%;
+  width: 200px;
+}
+
+/*# sourceMappingURL=Styles.css.map */
