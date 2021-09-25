@@ -1,0 +1,97 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: magenta;
+}
+header .MainContainer {
+  margin: auto;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  background-color: orange;
+}
+header .MainContainer .LeftDiv {
+  width: 10rem;
+  background-color: red;
+  display: block;
+}
+header .MainContainer .RigthDiv {
+  height: 100%;
+  width: 10rem;
+  background-color: yellow;
+  display: block;
+}
+header ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+header a {
+  text-decoration: none;
+  color: #ffffff;
+}
+header .barra {
+  background-color: #0063B1;
+}
+header .padre {
+  align-items: center;
+}
+header .padre i {
+  margin-right: 1.5rem;
+}
+header .navegacion {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+}
+header .navegacion a {
+  padding: 1rem;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  header .navegacion {
+    flex-direction: row;
+  }
+}
+header .enlace {
+  overflow: hidden;
+}
+header .enlace:target .submenu {
+  max-height: 300px;
+}
+header .submenu {
+  background-color: #4C4A48;
+  max-height: 0;
+  transition: 0.8s;
+}
+header .submenu a:hover {
+  background-color: #3a3a39;
+}
+
+@media (min-width: 768px) {
+  header .enlace {
+    flex: 1;
+    position: relative;
+    overflow: visible;
+  }
+  header .enlace .submenu {
+    position: absolute;
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  header .submenu a {
+    display: none;
+  }
+  header .enlace:target .submenu a {
+    display: block;
+  }
+}
+
+/*# sourceMappingURL=Styles2.css.map */
