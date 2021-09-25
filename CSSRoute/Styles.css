@@ -17,30 +17,15 @@ header .LeftBar {
   height: 100%;
   width: auto;
   background-color: red;
-  display: flex;
 }
 header .NavDiv {
   background-color: #eeff00;
   height: 100%;
   width: 200px;
 }
-header .NavDiv ul, header .NavDiv ol {
-  list-style: none;
-}
-header .NavDiv .NavMenu li a {
-  background-color: black;
-  color: white;
+header .NavDiv a {
   text-decoration: none;
-  width: 200px;
-  padding: 10px 15px;
-  display: block;
-}
-header .NavDiv .NavMenu li a:hover {
-  background-color: gray;
-  color: black;
-}
-header .NavDiv .NavMenu li ul {
-  display: none;
+  padding: 0;
 }
 header .BrandLogo {
   height: 100%;

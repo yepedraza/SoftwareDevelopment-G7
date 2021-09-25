@@ -17,29 +17,14 @@ header {
         height: 100%;
         width: auto;
         background-color: red;
-        display: flex;
     }
     .NavDiv{
         background-color: rgb(238, 255, 0);
         height: 100%;
         width: 200px;
-        ul, ol {
-            list-style: none;
-        }
-        .NavMenu li a{
-            background-color: black;
-            color: white;
+        a{
             text-decoration: none;
-            width: 200px;
-            padding: 10px 15px;
-            display: block;
-        }
-        .NavMenu li a:hover{
-            background-color: gray;
-            color: black {};
-        }
-        .NavMenu li ul{
-            display: none;
+            padding: 0;
         }
     }
     .BrandLogo{
