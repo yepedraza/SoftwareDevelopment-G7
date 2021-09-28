@@ -33,3 +33,17 @@ footer{
     font-weight: 500;
     text-align: justify;
 }
+
+.box_footer h2{
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.box_footer a{
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.box_footer a:hover{
+    opacity: 0.8;
+}
