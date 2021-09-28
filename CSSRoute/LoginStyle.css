@@ -8,7 +8,7 @@
 body {
   height: 100vh;
   font-family: "Poppins", sans-serif;
-  /*background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);*/
+  background-image: linear-gradient(to top, #1a497a 0%, #c5c5c5 100%);
 }
 
 .loggin-container {
@@ -28,25 +28,19 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  border: 1px solid red;
   border-radius: 5px;
   padding-top: 0.5rem;
-  background-color: yellow;
+  background-image: linear-gradient(to top, #2bb4c8 0%, #2bc8a6 100%);
+  /*background-color: yellow;*/
 }
 
-/*.image-container{
-    width: 50%;
-    padding: 2rem;
-    background-color: var(--image-bg);
-    box-sizing: border-box;
-}*/
 .title {
   margin-top: 1em;
   text-transform: capitalize;
   font-size: 2.25rem;
   font-weight: 600;
   letter-spacing: 1px;
-  color: blue;
+  color: #e2e4a7;
 }
 
 .social-login {
@@ -65,7 +59,7 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 5px;
-  border: 1px solid green;
+  border: 2px solid #1a497a;
 }
 .social-login .social-login-element img {
   width: 1.875rem;
@@ -75,8 +69,11 @@ body {
   left: -0.625rem;
 }
 .social-login .social-login-element:hover {
-  background-color: white;
+  background-color: #1a497a;
   cursor: pointer;
+}
+.social-login .social-login-element:hover span {
+  color: #e2e4a7;
 }
 
 .loggin-info-container p {
@@ -85,7 +82,6 @@ body {
 }
 .loggin-info-container .inputs-container {
   margin-top: 1.5em;
-  border: 1px solid red;
   height: 55%;
   width: 85%;
   display: flex;
@@ -108,8 +104,9 @@ body {
   letter-spacing: 1px;
   box-sizing: border-box;
 }
-.input :hover {
-  border: 2px solid black;
+
+.input:hover {
+  border: 2px solid #1a497a;
 }
 
 .btn {
@@ -118,7 +115,7 @@ body {
   text-transform: uppercase;
   color: white;
   border-radius: 5px;
-  background-color: magenta;
+  background-color: #1a497a;
   cursor: pointer;
   border: none;
   border-radius: 5px;
@@ -129,7 +126,7 @@ body {
 }
 
 span {
-  color: orange;
+  color: #e2e2e2;
   font-weight: 600;
   cursor: pointer;
 }
@@ -140,7 +137,6 @@ span {
   }
 
   .loggin-container {
-    border: 2px solid red;
     width: 70%;
     margin-top: 3rem;
   }
