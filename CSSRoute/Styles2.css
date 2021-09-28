@@ -5,25 +5,35 @@
 }
 
 header {
-  background-color: magenta;
+  font-family: Nunito, Helvetica, Arial, sans-serif;
+  background-color: #0c213c;
 }
 header .MainContainer {
+  font-weight: 550;
   margin: auto;
   width: 90%;
   display: flex;
   justify-content: space-between;
-  background-color: orange;
+  background-color: #0c213c;
+  height: 70px;
+  align-items: center;
 }
 header .MainContainer .LeftDiv {
-  width: 10rem;
-  background-color: red;
+  width: 15rem;
+  background-color: #0c213c;
   display: block;
 }
 header .MainContainer .RigthDiv {
   height: 100%;
   width: 10rem;
-  background-color: yellow;
-  display: block;
+  background-color: #0c213c;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: white;
+}
+header .MainContainer .RigthDiv:hover {
+  background-color: #1a497a;
 }
 header ul {
   list-style: none;
@@ -35,9 +45,13 @@ header a {
   color: #ffffff;
 }
 header .barra {
-  background-color: #0063B1;
+  background-color: #0c213c;
+}
+header .barra:hover {
+  background-color: #1a497a;
 }
 header .padre {
+  height: 100%;
   align-items: center;
 }
 header .padre i {
@@ -66,12 +80,12 @@ header .enlace:target .submenu {
   max-height: 300px;
 }
 header .submenu {
-  background-color: #4C4A48;
+  background-color: #1a497a;
   max-height: 0;
   transition: 0.8s;
 }
 header .submenu a:hover {
-  background-color: #3a3a39;
+  background-color: #375b83;
 }
 
 @media (min-width: 768px) {
