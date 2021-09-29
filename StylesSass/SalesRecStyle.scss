@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+header {
+    font-family: Nunito,Helvetica,Arial,sans-serif;
+    background-color: #0c213c;
+    .MainContainer{
+        font-weight: 550;
+        margin: auto;
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        background-color: #0c213c;
+        height: 70px;
+        align-items: center;
+        .LeftDiv{
+            width: 15rem;
+            background-color: #0c213c;
+            display: block;
+        }
+        .RigthDiv{
+            height: 100%;
+            width: 10rem;
+            background-color: #0c213c;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            color: white;
+        }
+        .RigthDiv:hover{
+            background-color: #1a497a;            
+        }
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    a {
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+    .barra {
+        background-color: #0c213c;
+    }
+    .barra:hover{
+        background-color: #1a497a;
+    }
+    .padre {
+        height: 100%;
+        align-items: center;
+    }
+    .padre i {
+        margin-right: 1.5rem;
+    }
+    .navegacion {
+        margin: 0 auto;
+        max-width: 1200px;
+        display: flex;
+        flex-direction: column;
+    }
+    .navegacion a {
+        padding: 1rem;
+        display: block;
+    }
+}
+@media (min-width:768px ) {
+    header{
+        .navegacion {
+            flex-direction: row;
+        }
+    }
+}
+header{
+    .enlace {
+        overflow: hidden;
+    }
+    .enlace:target .submenu {
+        max-height: 300px;
+    }
+    .submenu {
+        background-color: #1a497a;
+        max-height: 0;
+        transition: .8s;
+    }
+    .submenu a:hover {
+        background-color: #375b83;
+    }
+}
+@media (min-width:768px ) {
+    header{
+        .enlace {
+            flex: 1;
+            position: relative;
+            overflow: visible;
+        }
+        .enlace .submenu {
+            position: absolute;
+            width: 100%;
+        }
+    }
+}
+@media (min-width:768px) {
+    header{
+        .submenu a {
+            display: none;
+        }
+        .enlace:target .submenu a {
+            display: block;
+        }
+    }
+}
