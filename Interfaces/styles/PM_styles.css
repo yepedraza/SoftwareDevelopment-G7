@@ -63,7 +63,7 @@ header {
 }
 
 header h1{
-    color: #e2e4a7;
+    color: #c7e5db;
 }
 .search{
     border: 1px solid #ccc;
@@ -90,10 +90,12 @@ main {
 }
 
 .box_header{
+    color: #e2e4a7;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #e2e2e2;
+    font-size: 1.5rem;
 }
 
 .box_header button{
@@ -118,10 +120,13 @@ table{
 }
 
 thead td{
+    color: #e2e2e2;
     font-weight: 700;
+    font-size: 20px;
 }
 
 td{
+    color: #e2e2e2;
     padding: 0.5rem;
 }
 
