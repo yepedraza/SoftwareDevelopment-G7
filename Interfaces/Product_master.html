@@ -11,24 +11,24 @@
 <body>
     <div class="sidebar">
         <div class="sidebar_title">
-            <h2>Product List</h2>
+            <h1>Product List</h1>
         </div>
         <div class="product_list">
             <ul>
                 <li>
-                    <a href=""><span>Product #1</span></a>
+                    <a href="#" class="active"><span>Product #1</span></a>
                 </li>
                 <li>
-                    <a href=""><span>Product #2</span></a>
+                    <a href="#"><span>Product #2</span></a>
                 </li>
                 <li>
-                    <a href=""><span>Product #3</span></a>
+                    <a href="#"><span>Product #3</span></a>
                 </li>
                 <li>
-                    <a href=""><span>Product #4</span></a>
+                    <a href="#"><span>Product #4</span></a>
                 </li>
                 <li>
-                    <a href=""><span>Product #5</span></a>
+                    <a href="#"><span>Product #5</span></a>
                 </li>
             </ul>
         </div>
@@ -36,10 +36,49 @@
     <div class="product_info">
         <header>
             <h1>Product Search</h1>
-            <input type="search" placeholder="Search here">
+            <div class="search">
+                <input type="search" placeholder="Search here">
+            </div>
         </header>
         <main>
-
+            <div class="product_box">
+                <div class="box_header">
+                    <h2>Product #1</h2>
+                    <button>Modify</button>
+                </div>
+                <div class="box_body">
+                    <div class="table_responsive">
+                        <table width="100%">
+                            <thead>
+                                <tr>
+                                    <td>Product Data</td>
+                                    <!--<td>Description</td>
+                                    <td>Unit Value</td>
+                                    <td>Current State</td>-->
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Product ID</td>
+                                    <td>ID 1545045</td>
+                                </tr>
+                                <tr>
+                                    <td>Description</td>
+                                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                                </tr>
+                                <tr>
+                                    <td>Unit Value</td>
+                                    <td>COP$ 50.000</td>
+                                </tr>
+                                <tr>
+                                    <td>Current State</td>
+                                    <td>Valiable</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </main>
     </div>
 
