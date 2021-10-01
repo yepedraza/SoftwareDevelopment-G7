@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    font-family:Nunito,Helvetica,Arial,sans-serif;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+main {
+    margin-top: 100px;  
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+main .container {
+    padding-top: 20px;
+    padding-left: 30px;
+    width: 800px; 
+    height: 430px; 
+    border-radius: 10px;
+    border: 1px solid #c5c5c5;
+    background-color: #e2e2e2;
+    color: #1a497a;
+    font-weight: bold;
+    font-family: Nunito,Helvetica,Arial,sans-serif;
+    text-align: left;
+}
+
+// Inputs
+main .main-input {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .main-input-container { 
+    width: 525px;
+    border-radius: 90px;
+    border: 1px solid #2bb4c8;
+    margin: 0 auto;
+}
+main .main-input-container .dollar-icon { 
+    margin-left: 10px;
+    
+}
+
+main .main-input input {
+    background-color: transparent;
+    color:#1a497a;
+    border-radius: 90px;
+    margin-left: 8px;
+    width: 93%;
+    height: 38px;
+    border: none;
+    outline: none;
+    
+}
+
+::placeholder { /* Internet Explorer */
+    color: #c5c5c5;
+  }
+
+main .main-input-container:hover {
+    box-shadow: 0 1px 6px 0 #20212447;
+    border-color: #dfe1e500; 
+    
+}
+
+// main .main-input input:focus {
+//     background-color: ;
+// }
+
+// Selector
+main .main-input .form-select{
+    width: 98%;
+    height: 35px;
+    border-radius: 90px;
+    background-color: #e2e2e2;
+    color:#1a497a;
+    border: 1px solid #2bb4c8;
+    outline: none;
+    display: flex;
+    justify-content: left;
+    margin: 0 auto;
+    margin-left: 8px;
+}
+
+main .container .form-select:hover {
+    border: 1px solid #c6c6c6;
+    box-shadow: 0 1px 1px #c7e5db;
+    color: #2bc8a6;
+}
+
+// Buttons
+main .main-buttons {
+    width: 530px;
+    margin: 0 auto; 
+    display: flex;
+    justify-content: flex-end;  
+}
+
+main .main-buttons div {
+    display:inline-block;
+}
+
+main .main-buttons button {
+    height: 36px;
+    background-color: #2bb4c8;
+    border: 0;
+    font-size: 14px;
+    color: #e2e2e2;
+    border-radius: 5px;
+    padding: 0 15px;
+    margin-right: 15px;
+}
+
+main .main-buttons button:hover {
+    border: 1px solid #c6c6c6;
+    box-shadow: 0 1px 1px #000001;
+    color: #c7e5db;
+}
