@@ -40,3 +40,10 @@ It contains a side panel where the registered products can be found, as well as 
 
 **By: Yery Pedraza** \\
 **Branch: ProductMaster**
+
+### Sales record interface
+
+The sales record has the possibility of entering the customer's data (in this case the identity number and his name) to be compared with the database, in addition, it allows entering the seller's id and his name. To register a sale, the product id and the quantity of items purchased must be entered to register them in the sale table.
+
+**By: Santiago Téllez** \\ 
+**Branch: ReactSalesRecord**
