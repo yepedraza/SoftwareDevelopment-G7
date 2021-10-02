@@ -8,36 +8,67 @@
     <link rel="stylesheet" type="text/css" href="CSSRoute/SalesRecStyle.css">
     <script src="https://kit.fontawesome.com/f239b2f471.js" crossorigin="anonymous"></script>
 	<link href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <script type="text/javascript">
+    function obtenerDatos(){
+        var clienteid = document.getElementById("idclient").value;
+        var clientenombre = document.getElementById("nameclient").value;
+        var vendedorid = document.getElementById("idseller").value;
+        var vendedornombre = document.getElementById("nameseller").value;
+        var productoid = document.getElementById("productid").value;
+        var cantidadproducto = document.getElementById("productquantity").value;
+        alert(cantidadproducto)
+    }
+    </script>
 </head>
 <body>
 
-    <header>
-        <div class = "MainContainer">
-            <div class = "LeftDiv">
-                <nav class="barra">
-                    <ul class="navegacion">
-                        <li class="enlace" id="perfil">
-                            <a href="#perfil" class="padre">
-                                <i class="fas fa-bars"></i> Navegación
-                            </a>
-                            <div class="submenu">
-                                <a href="#">Login</a>
-                                <a href="#">User Control</a>
-                                <a href="#">Sellers information</a>
-                                <a href="#">Selling states</a>
-                                <a href="#">Selling information</a>
-                            </div>
-                        </li>
-                    </ul>
-                </nav>
+    <div class = "SalesRecordContainer">
+        <div class = "SuperiorContainer">
+            <div class = "DateContainer">
+                <span>
+                    29/09/2021
+                </span>
             </div>
-            <div class="RigthDiv">
-                <i class="fas fa-user"></i></i> Usuario
-            </div>
+            <form class = "InformationContainer">
+                <input class = "InfoNumberForm" type = "text" placeholder = "Client ID" id = "idclient"></input>
+                <input class = "InfoTextForm" type = "text" placeholder = "Nombre" id = "nameclient"></input>                
+            </form>
+            <form class = "InformationContainer">
+                <input class = "InfoNumberForm" type = "text" placeholder = "Seller ID" id = "idseller"></input>
+                <input class = "InfoTextForm" type = "text" placeholder = "Vendedor" id = "nameseller"></input>                
+            </form>
+            <form class = "InformationContainer">
+                <input class = "InfoNumberForm" type = "text" placeholder = "Id del producto" id = "productid"></input>
+                <input class = "InfoNumberForm" type = "text" placeholder = "Cantidad de productos" id = "productquantity"></input>
+                <input class = "Entrance" type = "button" value = "Ingresar producto" onclick = "obtenerDatos()"/>          
+            </form>
         </div>
-    </header>
-
-
+        <div class = "BotomContainer">
+            <h1>Titulo</h1>
+            <table id="table">
+                <form name = "foro">
+                <tr>
+                    <th>Id. Venta</th>
+                    <th>Producto</th>
+                    <th>Identificador</th>
+                    <th>Precio unitario</th>
+                    <th>Fecha</th>
+                    <th>Cantidad</th>
+                    <th>Subtotal</th>
+                </tr>
+                <tr>
+                    <td>idventa</td>
+                    <td>Papas</td>
+                    <td>{obtenerDatos.productoid}</td>
+                    <td>$2000</td>
+                    <td>29/09/2021</td>
+                    <td><input class = "Actualizable" type="text" name = "cantidaddeproducto" id = "cantidaddeproducto"></td>
+                    <td>$4000</td>
+                </tr>
+            </form>
+            </table>
+        </div>
+    </div>
 
 </body>
 </html>

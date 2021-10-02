@@ -78,7 +78,7 @@ header .enlace {
   overflow: hidden;
 }
 header .enlace:target .submenu {
-  max-height: 300px;
+  max-height: 350px;
 }
 header .submenu {
   background-color: #1a497a;
@@ -108,5 +108,3 @@ header .submenu a:hover {
     display: block;
   }
 }
-
-/*# sourceMappingURL=Styles2.css.map */

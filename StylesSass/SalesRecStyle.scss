@@ -4,113 +4,91 @@
     margin: 0;
     padding: 0;
 }
-header {
-    font-family: 'Nunito',Helvetica,Arial,sans-serif;
-    background-color: #0c213c;
-    .MainContainer{
-        font-weight: 550;
-        margin: auto;
-        width: 90%;
-        display: flex;
-        justify-content: space-between;
-        background-color: #0c213c;
-        height: 70px;
-        align-items: center;
-        .LeftDiv{
-            width: 15rem;
-            background-color: #0c213c;
-            display: block;
-        }
-        .RigthDiv{
-            height: 100%;
-            width: 10rem;
-            background-color: #0c213c;
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-            color: white;
-        }
-        .RigthDiv:hover{
-            background-color: #1a497a;            
-        }
-    }
-    ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-    a {
-        text-decoration: none;
-        color: #ffffff;
-    }
-
-    .barra {
-        background-color: #0c213c;
-    }
-    .barra:hover{
-        background-color: #1a497a;
-    }
-    .padre {
-        height: 100%;
-        align-items: center;
-    }
-    .padre i {
-        margin-right: 1.5rem;
-    }
-    .navegacion {
-        margin: 0 auto;
-        max-width: 1200px;
+body {
+    height: 1065px;
+    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(to top, #1a497a 0%, #c5c5c5 100%);
+    align-items: center;
+}
+.SalesRecordContainer {
+    height: 800px;
+    width: 90%;
+    margin: 6em auto;
+    display: flex;
+    overflow: hidden;/*Para que se vean las esquinas*/
+    border-radius: 10px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.SuperiorContainer{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    padding-top: 0.5rem;
+    background-image: linear-gradient(to top, #2bb4c8 0%, #2bc8a6 100%);
+    justify-content: space-evenly;
+    .DateContainer{
+        width: 15em;
+        height: 5em;
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        span{
+            font-size: 2.25rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: #e2e4a7;
+        }
     }
-    .navegacion a {
-        padding: 1rem;
-        display: block;
-    }
+    .InformationContainer{
+        width: 90%;
+        height: 5em;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        .InfoNumberForm , .InfoTextForm{
+            padding-left: 20px;
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            box-sizing: border-box;
+            height: 3.125rem;
+            font-size: 1em;
+        }
+        .InfoNumberForm{
+            width: 30%;
+        }
+        .InfoTextForm{
+            width: 60%;
+        }
+        .Entrance{
+            border: 2px solid #0c213c;
+            height: 3em;
+            border-radius: 1.5em;
+            width: 18em;
+            background-color: #1a497a;
+            color: #c5c5c5;
+            font-size: 0.95em;
+            font-weight: 700;
+        }
+        .Entrance:hover{
+            background-color: #2bb4c8;
+            color: #e2e4a7;
+        }
+    }    
 }
-@media (min-width:768px ) {
-    header{
-        .navegacion {
-            flex-direction: row;
-        }
-    }
+.Actualizable{
+    border: none;
+    cursor: pointer; 
 }
-header{
-    .enlace {
-        overflow: hidden;
-    }
-    .enlace:target .submenu {
-        max-height: 300px;
-    }
-    .submenu {
-        background-color: #1a497a;
-        max-height: 0;
-        transition: .8s;
-    }
-    .submenu a:hover {
-        background-color: #375b83;
-    }
-}
-@media (min-width:768px ) {
-    header{
-        .enlace {
-            flex: 1;
-            position: relative;
-            overflow: visible;
-        }
-        .enlace .submenu {
-            position: absolute;
-            width: 100%;
-        }
-    }
-}
-@media (min-width:768px) {
-    header{
-        .submenu a {
-            display: none;
-        }
-        .enlace:target .submenu a {
-            display: block;
-        }
-    }
+.BotomContainer{
+    height: 50%;
+    background-color: blue;
 }
