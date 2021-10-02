@@ -32,7 +32,7 @@ I'm Daniel,I am 21 years old, I like playing volleyball, videogames and movies, 
 Contains fields to store the ID, description, unit value, and status of the product. Additionally, 3 buttons, one to save the information entered, another to clear the fields and the third to view the saved products
 
 **By: Andrea Amaya** \\
-**Branch: ProductMaster** 
+**Branch: ProductRegister** 
 
 ### Product Master interface
 
