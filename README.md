@@ -25,3 +25,18 @@ I am a statistician, I am from Bogota and I like to read and spend time with my 
 I'm Daniel,I am 21 years old, I like playing volleyball, videogames and movies, I am finishing my studies as an mechatronics engineer.
 
 ---
+# Interface presentation
+
+### Interface for Product Registration
+
+Contains fields to store the ID, description, unit value, and status of the product. Additionally, 3 buttons, one to save the information entered, another to clear the fields and the third to view the saved products
+
+**By: Andrea Amaya** \\
+**Branch: ProductMaster** 
+
+### Product Master interface
+
+It contains a side panel where the registered products can be found, as well as a bar where a product search engine can be found. When selecting a product, its attributes are shown on the screen and can be modified by a button.
+
+**By: Yery Pedraza** \\
+**Branch: ProductMaster**
