@@ -2,6 +2,10 @@
 
 ## Group Name: Grupo 7
 
+## Trello
+
+<https://trello.com/b/ozitnBEm>
+
 ## Team members
 
 ### Yery Pedraza
@@ -19,3 +23,5 @@ I am a statistician, I am from Bogota and I like to read and spend time with my 
 ### Daniel Sanchez
 
 I'm Daniel,I am 21 years old, I like playing volleyball, videogames and movies, I am finishing my studies as an mechatronics engineer.
+
+---
