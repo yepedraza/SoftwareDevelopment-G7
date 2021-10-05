@@ -1,7 +1,0 @@
-Requisitos
- El aplicativo me debe permitir
-1. Listar tareas pendientes o completadas
-2. Agregar nuevas tareas (tareas nuevas = tareas no completadas)
-3. Eliminar las tareas que ya han sido completadas
-4. Persistencia de datos locales (firebase)
-5. agregar estilos usando bootstrap
