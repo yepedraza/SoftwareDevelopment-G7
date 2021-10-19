@@ -1,5 +1,6 @@
-//importando paquetes
-const express = require('express');
-const morgan = require('morgan');
-const mongoose = require('mongoose');
-const cors = require('cors');
+module.exports = {
+    productsRouter: require('./products.router')
+    //usersRouter: require('./users.router'),
+    //authRouter: require('./auth.router')
+}
+
