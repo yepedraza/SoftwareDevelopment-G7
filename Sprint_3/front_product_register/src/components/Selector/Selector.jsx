@@ -5,7 +5,7 @@ const Selector = ({nameLabel}) => {
     return (
         <div>
             <label className="input-label">{nameLabel}</label>
-            <select className="form-select " aria-label="Default select example">
+            <select className="form-select " aria-label="state" defaultValue = "In-stock">
                 <option selected>Choose...</option>
                 <option value="1">In-stock</option>
                 <option value="2">Out-of-stock</option>
