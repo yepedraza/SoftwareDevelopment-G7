@@ -3,7 +3,7 @@ const express = require('express');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const expressValidator = require('express-validator');
+//const expressValidator = require('express-validator');
 
 //inicializando nuestra aplicación de express
 const app = express();
