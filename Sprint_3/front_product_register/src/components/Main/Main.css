@@ -1,0 +1,13 @@
+.Main {
+    margin-top: 100px;  
+    margin-bottom: 40px;
+    margin-left: 50px;
+    text-align: justify;
+    padding-top: 20px;
+    border-radius: 10px;
+    border: 1px solid #c5c5c5;
+    background-color: #e2e2e2;
+    color: #1a497a;
+    font-weight: bold;
+    font-family: Nunito,Helvetica,Arial,sans-serif;
+}
