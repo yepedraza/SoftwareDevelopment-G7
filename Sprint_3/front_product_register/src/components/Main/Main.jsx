@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Container from '../Container/Container'
 import Button from '../Buttons/Buttons'
 import { NavLink } from 'react-router-dom';
@@ -37,11 +37,9 @@ const Main = () => {
                     <NavLink to="/add">
                         <Button title="Create Product"/>
                     </NavLink>
-                    
-                    {//<Button title="Save" disabled={false} variant="contained" onClick={(e) => addProductData()}/>
-                     //<Button title="Clear" disabled={true} onClick={makeAlert}/>
-                     //<Button title="Product List" disabled={true} onClick={makeAlert}/>
-                    }
+                    <NavLink to="/edit">
+                        <Button title="Edit Product"/>
+                    </NavLink>
                     
                 </div>
                 
