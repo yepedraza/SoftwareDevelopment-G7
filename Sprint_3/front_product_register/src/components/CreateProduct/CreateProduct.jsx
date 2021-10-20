@@ -6,7 +6,6 @@ import Container from '../Container/Container';
 import Button from '../Buttons/Buttons';
 import Input from '../Inputs/Input';
 import { NavLink } from 'react-router-dom';
-//import Selector from '../Selector/Selector'
 //faBarcode
 import { faAlignJustify, faDollarSign} from '@fortawesome/free-solid-svg-icons'
 
@@ -29,7 +28,7 @@ const useStyles = makeStyles({
 export function CreateProduct() {
     const [product, setProduct] = useState(initialValue);
     const { value, description, state } = product;
-
+    
     const classes = useStyles();
     let history = useHistory();
 
@@ -52,7 +51,7 @@ export function CreateProduct() {
                 <Container titulo="PRODUCT REGISTRATION">
                     <section className = "main-input">
                         <Input nameLabel="Description:" value = {description} nameIcon={faAlignJustify} onChange={(e) => onValueChange(e)}/>
-                        <Input nameLabel="Unit Value:" value = {value} nameIcon={faDollarSign} onChange={(e) => Number(onValueChange(e))}/>
+                        <Input nameLabel="Unit Value:" value = {value} nameIcon={faDollarSign} onChange={(e) => onValueChange(e)}/>
                         
                     </section>
 
