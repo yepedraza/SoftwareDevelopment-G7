@@ -55,6 +55,10 @@ const createProduct = async (req, res) => {
             }
         });
     }
+    // let tempProduct = {
+    //     valor: parseInt(req.body.valor),
+    //     desc: req.body.description,
+    // }
     let product = new ProductSchema(req.body);
     try {
         await product.save();
