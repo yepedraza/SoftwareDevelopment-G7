@@ -4,6 +4,7 @@ import { ProductList } from './components/ProductList/ProductList';
 import { CreateProduct } from './components/CreateProduct/CreateProduct';
 import { EditProduct } from './components/EditProduct/EditProduct';
 import { NotFound } from './components/NotFound';
+import { Home } from './components/Home/Home';
 import Main from './components/Main/Main';
 
 function App() {
@@ -12,7 +13,8 @@ function App() {
       {//<Main />
       }
       <Switch>
-          <Route exact path="/" component={Main} />
+          <Route exact path="/" component={Home} />
+          <Route exact path="/Menu" component={Main} />
           <Route exact path="/list" component={ProductList} />
           <Route exact path="/add" component={CreateProduct} />
           <Route exact path="/edit/:id" component={EditProduct} />

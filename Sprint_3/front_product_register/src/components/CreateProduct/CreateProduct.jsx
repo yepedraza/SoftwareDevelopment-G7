@@ -5,9 +5,11 @@ import { useHistory } from 'react-router-dom';
 import Container from '../Container/Container';
 //import Button from '../Buttons/Buttons';
 //import Input from '../Inputs/Input';
-//import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 //faBarcode
-import { faAlignJustify, faDollarSign} from '@fortawesome/free-solid-svg-icons'
+//import { faAlignJustify, faDollarSign} from '@fortawesome/free-solid-svg-icons'
+
+const StyleButton = require('../Buttons/Buttons').default
 
 const initialValue = {
     value: '',
@@ -18,9 +20,9 @@ const initialValue = {
 const useStyles = makeStyles({
     container: {
         width: '50%',
-        margin: '5% 0 0 25%',
+        margin: '3% 0 0 25%',
         '& > *': {
-            marginTop: 20
+            marginTop: 15
         }
     }
 })
@@ -87,10 +89,7 @@ export function CreateProduct() {
                     </div>
                         
                         */}
-                        <FormControl>
-                            <Button variant="contained" onClick={(e) => addProductData()} color="primary">Save Product</Button>
-                        </FormControl>
-
+                        
                         <FormControl component="fieldset">
                             <FormLabel component="legend">Product State</FormLabel>
                             <RadioGroup
@@ -99,14 +98,22 @@ export function CreateProduct() {
                                 aria-label="state"
                                 defaultValue="In-Stock"
                                 value={state ? "In-Stock" : "Out-of-stock"}>
-                                <FormControlLabel value="In-Stock" control={<Radio color="success" />} label="In-Stock" />
-                                <FormControlLabel value="Out-of-stock" control={<Radio color="secondary" />} label="Out-of-stock" />
+                                <FormControlLabel value="In-Stock" control={<Radio color="primary" />} label="In-Stock" />
+                                <FormControlLabel value="Out-of-stock" control={<Radio color="primary" />} label="Out-of-stock" />
                             </RadioGroup>
                         </FormControl> 
+                        
+                        <FormControl>
+                            <Button variant="contained" onClick={(e) => addProductData()} color="primary">Save Product</Button>
+                        </FormControl>
                     </FormGroup>
-
+                    <div className="Buttons">
+                            <NavLink to="/"> 
+                                <StyleButton title= "Back"></StyleButton>
+                            </NavLink>
+                    </div>
                 </Container>
-        </div>
+            </div>
         </main>
     )
 }

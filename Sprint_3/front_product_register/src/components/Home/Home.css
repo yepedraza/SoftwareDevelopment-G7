@@ -1,4 +1,18 @@
-.Button {
+.Home-page { 
+    margin-top:auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 340px;
+    text-align: center;
+    line-height: 185px;
+    font-size: 35px;
+    background-color: #1a497a;
+    color: #fff;
+
+}
+
+.Button-home-page {
     margin-top: 6px;
     height: 36px;
     background-color: #e2e2e2;
@@ -11,7 +25,7 @@
     margin-right: 15px;
 }
 
-.Button:hover {
+.Button-home-page:hover {
     border: 1px solid #c6c6c6;
     box-shadow: 0 1px 1px #c5c5c5;
     color: #2bc8a6;

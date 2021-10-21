@@ -4,7 +4,6 @@ import { getProducts, deleteProduct } from '../../services/ProductService';
 import { Link } from 'react-router-dom';
 import Container from '../Container/Container';
 //import Button from '../Buttons/Buttons';
-//import {Button as StyleButton} from '../Buttons/Buttons';
 import { NavLink } from 'react-router-dom';
 
 const StyleButton = require('../Buttons/Buttons').default
@@ -79,8 +78,8 @@ export function ProductList() {
                                         <TableCell>{product.value}</TableCell>
                                         <TableCell>{product.state ? "In-Stock" : "Out-of-stock"}</TableCell>
                                         <TableCell>
-                                            <Button component={Link} to={`/edit/${product._id}`} color="primary">Editar</Button>
-                                            <Button color="secondary" onClick={() => deleteProductData(product._id)} >Eliminar</Button>
+                                            <Button component={Link} to={`/edit/${product._id}`} color="primary">Edit</Button>
+                                            <Button color="secondary" onClick={() => deleteProductData(product._id)} >Remove</Button>
                                         </TableCell>
                                     </TableRow>
                                 ))
