@@ -42,7 +42,7 @@ export function EditProduct() {
     }
 
     const onStateChange = (state) => {
-        setProduct({ ...product, "estado": state });
+        setProduct({ ...product, "state": state });
     }
 
     const updateProductData = async () => {
@@ -55,18 +55,18 @@ export function EditProduct() {
             <Typography variant="h4">Editar Producto</Typography>
             <FormControl>
                 <InputLabel htmlFor="my-input">Descripción</InputLabel>
-                <Input onChange={(e) => onValueChange(e)} name="descripcion" value={description} id="my-input" />
+                <Input onChange={(e) => onValueChange(e)} name="description" value={description} id="my-input" />
             </FormControl>
             <FormControl>
                 <InputLabel htmlFor="my-input">Valor</InputLabel>
-                <Input onChange={(e) => onValueChange(e)} name="valor" value={value} id="my-input" />
+                <Input onChange={(e) => onValueChange(e)} name="value" value={value} id="my-input" />
             </FormControl>
             <FormControl component="fieldset">
-                <FormLabel component="legend">Estado</FormLabel>
+                <FormLabel component="legend">State</FormLabel>
                 <RadioGroup
-                    name='estado'
+                    name='state'
                     onChange={(e) => onStateChange(e.target.value === "disponible")}
-                    aria-label="estado"
+                    aria-label="state"
                     defaultValue="disponible"
                     value={state ? "disponible" : "noDisponible"}>
                     <FormControlLabel value="disponible" control={<Radio />} label="Disponible" />

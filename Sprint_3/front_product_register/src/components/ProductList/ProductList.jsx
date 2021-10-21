@@ -16,6 +16,7 @@ const useStyles = makeStyles({
     },
     thead: {
         '& > *': {
+            width: 'auto',
             fontSize: 17,
             background: '#2bb4c8',
             color: '#FFFFFF',
@@ -25,6 +26,7 @@ const useStyles = makeStyles({
     row: {
         '& > *': {
             fontSize: 15,
+            color: '#1a497a',
             family: 'Nunito,Helvetica,Arial,sans-serif'
         }
     }
@@ -54,43 +56,46 @@ export function ProductList() {
     }
 
     return (
-        <div className = "main">
-            <Container titulo="PRODUCT LIST">
-                <Table className={classes.table}>
-                    <TableHead>
-                        <TableRow className={classes.thead}>
-                            <TableCell>Id Product</TableCell>
-                            <TableCell>Description</TableCell>
-                            <TableCell>Value</TableCell>
-                            <TableCell>State</TableCell>
-                            <TableCell></TableCell>
-                        </TableRow>
-                    </TableHead>
-                    <TableBody>
-                        {
-                            products.map(product => (
-                                <TableRow className={classes.row} key={product._id}>
-                                    <TableCell>{product._id}</TableCell>
-                                    <TableCell>{product.description}</TableCell>
-                                    <TableCell>{product.value}</TableCell>
-                                    <TableCell>{product.state ? "In-Stock" : "Out-of-stock"}</TableCell>
-                                    <TableCell>
-                                        <Button component={Link} to={`/edit/${product._id}`} color="primary">Editar</Button>
-                                        <Button color="secondary" onClick={() => deleteProductData(product._id)} >Eliminar</Button>
-                                    </TableCell>
-                                </TableRow>
-                            ))
-                        }
-                    </TableBody>
-                    
-                </Table>
-
-                <div className="Buttons">
-                        <NavLink to="/"> 
-                            <StyleButton title= "Back"></StyleButton>
-                        </NavLink>
-                </div>
-            </Container>
-        </div>
+        <main>
+            <div className = "main">
+                <Container titulo="PRODUCT LIST">
+                <section className = "main-input">
+                    <Table className={classes.table}>
+                        <TableHead>
+                            <TableRow className={classes.thead}>
+                                <TableCell>Id Product</TableCell>
+                                <TableCell>Description</TableCell>
+                                <TableCell>Value</TableCell>
+                                <TableCell>State</TableCell>
+                                <TableCell></TableCell>
+                            </TableRow>
+                        </TableHead>
+                        <TableBody>
+                            {
+                                products.map(product => (
+                                    <TableRow className={classes.row} key={product._id}>
+                                        <TableCell>{product._id}</TableCell>
+                                        <TableCell>{product.description}</TableCell>
+                                        <TableCell>{product.value}</TableCell>
+                                        <TableCell>{product.state ? "In-Stock" : "Out-of-stock"}</TableCell>
+                                        <TableCell>
+                                            <Button component={Link} to={`/edit/${product._id}`} color="primary">Editar</Button>
+                                            <Button color="secondary" onClick={() => deleteProductData(product._id)} >Eliminar</Button>
+                                        </TableCell>
+                                    </TableRow>
+                                ))
+                            }
+                        </TableBody>
+                        
+                    </Table>
+                </section>
+                    <div className="Buttons">
+                            <NavLink to="/"> 
+                                <StyleButton title= "Back"></StyleButton>
+                            </NavLink>
+                    </div>
+                </Container>
+            </div>
+        </main>
     )
 }

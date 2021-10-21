@@ -1,0 +1,23 @@
+.tableStyle {
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Nunito,Helvetica,Arial,sans-serif;
+    width: 95%;
+    
+    
+    
+}
+
+.tableHead {
+    background-color: #2bb4c8;
+    font-size: 17px;
+    color: #e2e2e2;
+    
+}
+
+.tableRow {
+    
+    color: #1a497a;
+    font-family: Nunito,Helvetica,Arial,sans-serif;
+    padding-left: 5px;
+}
