@@ -26,6 +26,9 @@ class Ownheader extends Component {
                                         <NavLink to="/sales">
                                         <a>Sales</a>
                                         </NavLink>
+                                        <NavLink to="/usermaster">
+                                        <a>UserMaster</a>
+                                        </NavLink>                                        
                                         <a href="d">Products</a>
                                         <a href="Menu">Product Master</a>
                                     </div>
