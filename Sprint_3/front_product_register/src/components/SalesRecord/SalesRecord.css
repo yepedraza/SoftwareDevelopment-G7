@@ -40,7 +40,6 @@ body {
 .SuperiorContainer .DateContainer {
   width: 15em;
   height: 5em;
-  background-color: yellowgreen;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -58,7 +57,6 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  background-color: yellowgreen;
   align-items: center;
 }
 .SuperiorContainer .InformationContainer .InfoNumberForm, .SuperiorContainer .InformationContainer .InfoTextForm {
@@ -77,10 +75,41 @@ body {
 .SuperiorContainer .InformationContainer .InfoTextForm {
   width: 60%;
 }
-
+.Entrance{
+  width: 200px;
+  height: 50px;
+  border-radius: 7px;
+  font-weight: 700;
+  font-size: 110%;
+  color: #2bc8a6;
+  background-color: #1a497a;
+  border: none;
+}
+.Entrance:hover{
+  font-size: 120%;
+  background-color: #37597e;
+}
 .BotomContainer {
   height: 50%;
-  background-color: blue;
+  align-items: center;
 }
-
+/*Tablas*/
+.tableStyle {
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Nunito,Helvetica,Arial,sans-serif;
+  width: 95%; 
+}
+.tableHead {
+  background-color: #2bb4c8;
+  font-size: 17px;
+  color: #e2e2e2;
+  
+}
+.tableRow {
+  
+  color: #1a497a;
+  font-family: Nunito,Helvetica,Arial,sans-serif;
+  padding-left: 5px;
+}
 /*# sourceMappingURL=SalesRecStyle.css.map */
