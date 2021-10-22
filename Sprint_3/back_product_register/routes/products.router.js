@@ -6,9 +6,9 @@ const { body } = require('express-validator');
 /*importando el controlador de los productos, encargado de gestionar
 la interaccion entre las peticiones HTTP y la base de datos*/
 const { productsController } = require('../controllers');
-//const verifyToken = require('../middlewares/verifyToken');
+const verifyToken = require('../middlewares/verifyToken');
 
-router.get('/:id',  productsController.getProduct);
+router.get('/:id', verifyToken, productsController.getProduct);
 
 router.get('/', productsController.getProducts);
 
@@ -17,15 +17,15 @@ router.post('/',
     body('value', 'El valor del producto es requerido y debe ser numerico').exists().isNumeric(),
     body('description', 'La descripción del producto es requerida').exists(),
     body('state', 'El estado del producto es requerido(true/false)').isBoolean().exists()
-    , productsController.createProduct);
+    , verifyToken, productsController.createProduct);
 
 //escribiendo las reglas que deben cumplir los parametros para actualizar un producto               
 router.put('/:id',
     body('value', 'El valor del producto es requerido y debe ser numerico').exists().isNumeric(),
     body('description', 'La descripción del producto es requerida').exists(),
     body('state', 'El estado del producto es requerido(true/false)').isBoolean().exists()
-    ,  productsController.updateProduct);
+    , verifyToken, productsController.updateProduct);
 
-router.delete('/:id', productsController.deleteProduct);
+router.delete('/:id', verifyToken, productsController.deleteProduct);
 
 module.exports = router;

@@ -2,7 +2,7 @@
 const express = require('express');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
-const cors = require('cors');
+const cors = require('cors'); // Acceso a los recursos compartidos 
 //const expressValidator = require('express-validator');
 
 //inicializando nuestra aplicación de express
@@ -44,3 +44,5 @@ const routes = require('./routes');
 /*usando las rutas de productos para toda las peticiones
  que llegen a nuestra API con /productos */
 app.use('/productos', routes.productsRouter);
+app.use('/usuarios', routes.usersRouter);
+app.use('/auth', routes.authRouter);
