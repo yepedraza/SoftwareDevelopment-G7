@@ -9,6 +9,7 @@ import Login from './components/Login/Login';
 import Main from './components/Main/Main';
 import SalesRecord from './components/SalesRecord/SalesRecord';
 import Product_Master from './components/ProductMaster/Product_master';
+import UserMaster from './components/UserMaster/UserMaster';
 
 function App() {
   return (
