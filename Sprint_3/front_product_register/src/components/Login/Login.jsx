@@ -1,5 +1,5 @@
 import "./Login.css";
-import Ownheader from "../Header/Ownheader";
+//import Ownheader from "../Header/Ownheader";
 import Ownfooter from "../Footer/Ownfooter";
 import { NavLink } from 'react-router-dom';
 
