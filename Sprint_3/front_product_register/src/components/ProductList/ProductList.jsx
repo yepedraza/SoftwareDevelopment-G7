@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import { Table, TableHead, TableCell, TableRow, TableBody, Button, makeStyles } from '@material-ui/core';
+import { Table, TableHead, TableCell, TableRow, TableBody, Button} from '@material-ui/core';
 import { getProducts, deleteProduct } from '../../services/ProductService';
+import { makeStyles } from '@material-ui/styles';
 import { Link } from 'react-router-dom';
 import Container from '../Container/Container';
 import Ownfooter from '../Footer/Ownfooter'
