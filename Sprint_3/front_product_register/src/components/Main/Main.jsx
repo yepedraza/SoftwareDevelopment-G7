@@ -29,7 +29,7 @@ const Main = () => {
                     <NavLink to="/add">
                         <Button title="Create Product"/>
                     </NavLink>
-                    <NavLink to="/edit">
+                    <NavLink to="/edit/:id">
                         <Button title="Edit Product"/>
                     </NavLink>
                     

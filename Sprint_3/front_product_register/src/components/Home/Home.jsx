@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from '../Buttons/Buttons'
 import Ownfooter from '../Footer/Ownfooter'
+import OwnHeader from '../Header/Ownheader'
 import { NavLink } from 'react-router-dom';
 import "./Home.css"
 
@@ -10,7 +11,7 @@ export function Home() {
         <div>
             
             
-
+            <OwnHeader/>
             <div className="Home-page">
                 Welcome to the Marketplace
             

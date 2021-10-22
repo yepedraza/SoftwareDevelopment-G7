@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import { NavLink } from 'react-router-dom';
 /*import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'*/
 import './styleheader.css'
 class Ownheader extends Component {
@@ -16,9 +17,15 @@ class Ownheader extends Component {
                                         <i className="fas fa-bars"></i> Options
                                     </a>
                                     <div className="submenu">
-                                        <a href="App.js">Logout</a>
-                                        <a href="SalesRecord.js">Users</a>
-                                        <a href="v">Sales</a>
+                                        <NavLink to="/">
+                                            <a>Logout</a>
+                                        </NavLink>
+                                        <NavLink to="/Menu">
+                                            <a>Products</a>
+                                        </NavLink>
+                                        <NavLink to="/sales">
+                                        <a>Sales</a>
+                                        </NavLink>
                                         <a href="d">Products</a>
                                         <a href="Menu">Product Master</a>
                                     </div>
