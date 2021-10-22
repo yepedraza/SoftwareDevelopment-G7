@@ -23,6 +23,7 @@ function App() {
           <Route exact path="/add" component={CreateProduct} />
           <Route exact path="/edit/:id" component={EditProduct} />
           <Route exact path="/sales" component={SalesRecord} />
+          <Route exact path="/usermaster" component={UserMaster} />
           <Route exact path="/product_master" component={Product_Master} />
           <Route component={NotFound} />   
       </Switch>

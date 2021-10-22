@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+
+.UserMasterContainer {
+  height: 600px;
+  width: 90%;
+  margin: 6em auto;
+  display: flex;
+  overflow: hidden;
+  /*Para que se vean las esquinas*/
+  border-radius: 10px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.login-form{
+  width:100%;
+  max-width: 950px;
+  max-height: 700px;
+  padding: 50px;
+  margin: auto;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(to top, #2bb4c8 0%, #2bc8a6 100%);
+  margin-top:30px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  
+}
+.row-form{
+  width:60%;
+  background-color:#e2e4a7;
+  border: 10px;
+  border-radius: 5px ;
+  height:35px;
+  padding-left: 20px;
+}
+.tituloprincipal{
+  display: flex;
+  justify-content: space-evenly;
+  font-family:Nunito;
+  font-size: 40px;
+  font-weight: 1000;
+  margin-bottom: 50px;
+  color:white;
+}
+.titulos{
+  color:white;
+  font-family:Nunito;
+  font-size: 25px;
+  font-weight: 700;
+}
+.formgroupstyle{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-content: flex-start;
+  align-items:baseline;
+}
+.boton{
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+ 
+  margin-top:40px;
+  margin-left: 175px;
+}
+/*# sourceMappingURL=SalesRecStyle.css.map */
