@@ -1,13 +1,15 @@
-import React, { useState } from 'react';
-import { FormGroup, FormControl, makeStyles, RadioGroup, FormLabel, Button, FormControlLabel, Radio, Input, InputLabel, InputAdornment  } from '@material-ui/core';
+import React, { useState, useEffect } from 'react';
+import { FormGroup, FormControl, makeStyles, RadioGroup, FormLabel, Button, FormControlLabel, Radio, Input, InputLabel } from '@material-ui/core';
 import { addProduct } from '../../services/ProductService';
 import { useHistory } from 'react-router-dom';
 import Container from '../Container/Container';
-import Ownfooter from '../Footer/Ownfooter'
-import Ownheader from '../Header/Ownheader'
+import Ownfooter from '../Footer/Ownfooter';
+import { Ownheader } from '../Header/Ownheader';
+import { verifyToken } from '../../services/AuthService';
+import { getCurrentUser } from '../../services/AuthService';
 //import Input from '../Inputs/Input';
 import { NavLink } from 'react-router-dom';
-//faBarcode
+//faBarcode, InputAdornment
 //import { faAlignJustify, faDollarSign} from '@fortawesome/free-solid-svg-icons'
 
 const StyleButton = require('../Buttons/Buttons').default
@@ -30,6 +32,13 @@ const useStyles = makeStyles({
 
 
 export function CreateProduct() {
+    const [user, setUser] = useState(null)
+
+    useEffect(() => {
+        verifyToken();
+        setUser(getCurrentUser());
+    }, [])
+
     const [product, setProduct] = useState(initialValue);
     const { value, description, state } = product;
     
@@ -46,7 +55,7 @@ export function CreateProduct() {
 
     const addProductData = async () => {
         await addProduct(product);
-        history.push('/');
+        history.push('/list');
     }
 
     return (
@@ -77,9 +86,6 @@ export function CreateProduct() {
                             </FormControl>
                             
                             {/*  
-
-                            
-
                             <Selector nameLabel="Product State:" onChange={(e) => onStateChange(e.target.value === "In-Stock")} 
                             defaultValue="In-Stock" value={estado ? "In-Stock" : "Out-of-stock"}> </Selector>
                             
@@ -105,12 +111,14 @@ export function CreateProduct() {
                                 </RadioGroup>
                             </FormControl> 
                             
+                            {user && (
                             <FormControl>
                                 <Button variant="contained" onClick={(e) => addProductData()} color="primary">Save Product</Button>
                             </FormControl>
+                            )}
                         </FormGroup>
                         <div className="Buttons">
-                                <NavLink to="/"> 
+                                <NavLink to="/menu"> 
                                     <StyleButton title= "Back"></StyleButton>
                                 </NavLink>
                         </div>

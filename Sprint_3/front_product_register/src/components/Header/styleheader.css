@@ -12,24 +12,25 @@ header {
 header .MainContainer {
   font-weight: 550;
   margin: auto;
-  width: 90%;
+  width: 95%;
   display: flex;
   justify-content: space-between;
   background-color: #0c213c;
   height: 70px;
-  align-items: center;
+  align-items: left;
 }
 header .MainContainer .LeftDiv {
-  width: 15rem;
+  width: 20rem;
   background-color: #0c213c;
-  display: block;
+  display: table;
 }
 header .MainContainer .RigthDiv {
-  height: 100%;
-  width: 10rem;
+  height: 90%;
+  width: 21rem;
+  margin-right: 20px;
   background-color: #0c213c;
   display: flex;
-  align-items: center;
+  align-items: right;
   justify-content: space-evenly;
   color: white;
 }

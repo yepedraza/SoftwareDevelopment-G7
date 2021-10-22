@@ -1,35 +1,35 @@
+import React, { useState } from 'react';
 import "./Login.css";
 //import Ownheader from "../Header/Ownheader";
+import { Grid, TextField, makeStyles, Button } from '@material-ui/core';
 import Ownfooter from "../Footer/Ownfooter";
 import { NavLink } from 'react-router-dom';
+import { loginAuth } from '../../services/AuthService';
 
 const initialValue = {
     email: '',
     password: ''
 }
 
-// export function Login() {
+export function Login() {
 
-//     const [credentials, setCredentials] = useState(initialValue)
+    const [credentials, setCredentials] = useState(initialValue)
 
-//     const {email, password} = credentials
+    const {email, password} = credentials
 
-//     const classes = useStyles();
+    const onValueChange = (e) => {
+        setCredentials({ ...credentials, [e.target.name]: e.target.value });
+    }
 
-//     const onValueChange = (e) => {
-//         setCredentials({ ...credentials, [e.target.name]: e.target.value });
-//     }
+    const startLogin = async () => {
+        let response = await loginAuth(credentials);
+        if(response.status === 200){
+            let token = response.data.token;
+            localStorage.setItem('token',token);
+            window.location = "/menu";
+        }
+    }
 
-//     const startLogin = async () => {
-//         let response = await loginAuth(credentials);
-//         if(response.status === 200){
-//             let token = response.data.token;
-//             localStorage.setItem('token',token);
-//             window.location = "/";
-//         }
-//     }
-
-const Login = () => {
   return (
     <div className="App">
       
@@ -47,17 +47,35 @@ const Login = () => {
             </div>
           </div>
           <p>Or</p>
+
           <form class="inputs-container" action="">
-            <input class="input" type="text" placeholder="Username" />
-            <p>
+          <Grid container spacing={8} alignItems="flex-end">
+            <Grid item md={true} sm={true} xs={true}>
+                <TextField value={email} name="email" onChange={(e) => onValueChange(e)} label="Email" type="email" fullWidth autoFocus required />
+            </Grid>
+          </Grid>
+          <Grid container spacing={8} alignItems="flex-end">
+            <Grid item md={true} sm={true} xs={true}>
+                <TextField  value={password} name="password" onChange={(e) => onValueChange(e)} label="Password" type="password" fullWidth required />
+            </Grid>
+          </Grid>
+          <Grid container justify="center" style={{ marginTop: '10px' }}>
+            <Button variant="outlined" onClick={() => startLogin()} color="primary" style={{ textTransform: "none" }}>Inicia sesión</Button>
+          </Grid>
+            {/* <p>
               ¿Forgot password? <span class="span"> Click here</span>
-            </p>
-            <input class="input" type="password" placeholder="Password" />
+            </p> */}
+            {/* <input class="input" type="password" placeholder="Password" />
             <button class="btn">Login</button>
 
             <p>
-              ¿Don't have an account? <span class="span"> Sign Up</span>
-            </p>
+              ¿Don't have an account? 
+            </p> */}
+
+            <NavLink to="/Signup">
+                <button class="btn-back"> Sign Up </button>
+            </NavLink>
+
             <NavLink to="/">
                 <button class="btn-back"> Back </button>
             </NavLink>
@@ -68,5 +86,3 @@ const Login = () => {
     </div>
   );
 }
-
-export default Login
