@@ -8,6 +8,7 @@ import { Home } from './components/Home/Home';
 import Login from './components/Login/Login';
 import Main from './components/Main/Main';
 import SalesRecord from './components/SalesRecord/SalesRecord';
+import Product_Master from './components/ProductMaster/Product_master';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route exact path="/add" component={CreateProduct} />
           <Route exact path="/edit/:id" component={EditProduct} />
           <Route exact path="/sales" component={SalesRecord} />
+          <Route exact path="/product_master" component={Product_Master} />
           <Route component={NotFound} />   
       </Switch>
       
