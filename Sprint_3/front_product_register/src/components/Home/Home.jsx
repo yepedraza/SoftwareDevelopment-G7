@@ -14,25 +14,16 @@ export function Home() {
             <div className="Home-page">
                 Welcome to the Marketplace
             
-            
-
                 <div>
-                    <NavLink to="/Menu">
+                    <NavLink to="/Login">
                         <button className = "Button-home-page">Log In</button>
                     </NavLink>
                 </div>
-            {/* <div className="Buttons">
-                    <NavLink to="/Menu">
-                        <Button title="Product Management"/>
-                    </NavLink>
-            </div> */}
             </div>
 
             <Ownfooter />
         
         </div>
-        
-
 
     )
 }

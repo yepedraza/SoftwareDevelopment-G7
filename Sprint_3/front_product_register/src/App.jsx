@@ -5,6 +5,7 @@ import { CreateProduct } from './components/CreateProduct/CreateProduct';
 import { EditProduct } from './components/EditProduct/EditProduct';
 import { NotFound } from './components/NotFound';
 import { Home } from './components/Home/Home';
+import Login from './components/Login/Login';
 import Main from './components/Main/Main';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       }
       <Switch>
           <Route exact path="/" component={Home} />
+          <Route exact path="/login" component={Login} />
           <Route exact path="/Menu" component={Main} />
           <Route exact path="/list" component={ProductList} />
           <Route exact path="/add" component={CreateProduct} />
