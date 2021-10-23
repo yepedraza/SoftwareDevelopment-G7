@@ -97,6 +97,10 @@
     min-height: calc(100vh - 90px);
 }
 
+.product_box{
+    display: flex;
+}
+
 .box_header{
     color: #e2e4a7;
     display: flex;

@@ -50,21 +50,21 @@ export function Product_Master() {
                                         <table width="100%">
                                             <thead>
                                                 <tr>
-                                                    <td>Product Data</td>
+                                                    <td>Yogurt</td>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
                                                     <td>Product ID</td>
-                                                    <td>ID 1545045</td>
+                                                    <td>ID 6173485f304b76337e3d3627</td>
                                                 </tr>
                                                 <tr>
                                                     <td>Description</td>
-                                                    <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium, nulla. Optio laboriosam quos at corporis quam. Porro molestiae quaerat labore. Et sunt inventore assumenda. Eligendi doloribus consectetur ab rem non.</td>
+                                                    <td>Yogurt</td>
                                                 </tr>
                                                 <tr>
                                                     <td>Unit Value</td>
-                                                    <td>COP$ 50.000</td>
+                                                    <td>17800</td>
                                                 </tr>
                                                 <tr>
                                                     <td>Current State</td>
