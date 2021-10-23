@@ -6,3 +6,6 @@ const usersUrl = "http://localhost:3002/usuarios";
 export const createUser = async (user) => {
     return await axios.post(`${usersUrl}/`, user);
 }
+export const editUser = async (user) => {
+    return await axios.put(`${usersUrl}/${user._id}`, user);
+}
