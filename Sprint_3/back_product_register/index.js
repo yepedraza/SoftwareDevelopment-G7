@@ -46,3 +46,4 @@ const routes = require('./routes');
 app.use('/productos', routes.productsRouter);
 app.use('/usuarios', routes.usersRouter);
 app.use('/auth', routes.authRouter);
+app.use('/sales', routes.salesRouter);/*Temporal */
