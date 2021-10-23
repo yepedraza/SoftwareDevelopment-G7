@@ -94,10 +94,7 @@ const updateUser = async (req, res) => {
     try {
         let newUser = {
             id: req.params.id,
-            Nombres: req.body.Nombres,
-            Apellidos: req.body.Apellidos,
-            Identificacion: req.body.Identificacion,
-            Celular: req.body.Celular,
+            fullname: req.body.fullname,
             email: req.body.email,
             password: req.body.password
         }
