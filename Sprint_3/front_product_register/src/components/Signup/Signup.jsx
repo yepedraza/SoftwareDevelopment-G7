@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { Grid, TextField, makeStyles, Button } from '@material-ui/core';
+import { Grid, TextField, Button } from '@material-ui/core';
+import { makeStyles } from '@material-ui/styles'
 import { createUser } from '../../services/UsersService'
 import { useHistory } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';

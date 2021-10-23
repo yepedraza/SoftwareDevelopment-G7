@@ -3,7 +3,8 @@ import React, { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom';
 /*import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'*/
 import './styleheader.css'
-import { Button, ListItemText, ListItemAvatar, ListItem, Avatar, makeStyles } from '@material-ui/core'
+import { Button, ListItemText, ListItemAvatar, ListItem, Avatar } from '@material-ui/core'
+import { makeStyles } from '@material-ui/styles'
 import { getCurrentUser } from '../../services/AuthService';
 import { blue, deepOrange } from '@material-ui/core/colors';
 
