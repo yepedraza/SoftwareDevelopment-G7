@@ -3,7 +3,7 @@ import Ownfooter from '../Footer/Ownfooter'
 import { Ownheader } from '../Header/Ownheader'
 import { NavLink } from 'react-router-dom';
 
-const Product_Master = () => {
+export function Product_Master() {
 
     return (
         <div className='App'>
@@ -83,5 +83,3 @@ const Product_Master = () => {
         </div>
     )
 }
-
-export default Product_Master

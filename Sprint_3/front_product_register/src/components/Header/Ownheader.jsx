@@ -61,9 +61,10 @@ export function Ownheader() {
                                 {user && (
                                     <>
                                         <div className="submenu">
-                                            <a href="usuarios">Users</a>
+                                            <a href="usermaster">Users</a>
                                             <a href="sales">Sales</a>
                                             <a href="Menu">Products</a>
+                                            <a href="product_master">Products list</a>
                                         </div>
                                     </>
                                 )}

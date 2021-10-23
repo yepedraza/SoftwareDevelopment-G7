@@ -19,7 +19,7 @@
     /*position: fixed;*/
     left: 0;
     top: 0;
-    height: 100%;
+    /*height: 100%;
     /*background: #2bc8a6;*/
     background: #2bb4c8;
 }
@@ -63,9 +63,10 @@
 .headerp {
     width: 100%;
     display: flex;
-    /*justify-content: space-between;*/
+    justify-content: space-between;
     padding: 1rem;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 5px rgb(0 0 0 / 20%);
+    flex-wrap: wrap;
 }
 
 .headerp h1{
