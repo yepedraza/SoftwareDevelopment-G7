@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
-import { FormGroup, FormControl, RadioGroup, FormLabel, Button, FormControlLabel, Radio, Input, InputLabel, InputAdornment  } from '@material-ui/core';
-import { makeStyles } from '@material-ui/styles';
+import React, { useState, useEffect } from 'react';
+import { FormGroup, FormControl, makeStyles, RadioGroup, FormLabel, Button, FormControlLabel, Radio, Input, InputLabel } from '@material-ui/core';
 import { addProduct } from '../../services/ProductService';
 import { useHistory } from 'react-router-dom';
 import Container from '../Container/Container';
-import Ownfooter from '../Footer/Ownfooter'
-import Ownheader from '../Header/Ownheader'
-//import Input from '../Inputs/Input';
+import Ownfooter from '../Footer/Ownfooter';
+import { Ownheader } from '../Header/Ownheader';
+import { verifyToken } from '../../services/AuthService';
+import { getCurrentUser } from '../../services/AuthService';
 import { NavLink } from 'react-router-dom';
-//faBarcode
+//import '../Main/Main.css';
+//faBarcode, InputAdornment
 //import { faAlignJustify, faDollarSign} from '@fortawesome/free-solid-svg-icons'
 
 const StyleButton = require('../Buttons/Buttons').default
@@ -20,7 +21,8 @@ const initialValue = {
 }
 
 const useStyles = makeStyles({
-    container: {
+    containerStyle: {
+        
         width: '50%',
         margin: '3% 0 0 25%',
         '& > *': {
@@ -31,6 +33,13 @@ const useStyles = makeStyles({
 
 
 export function CreateProduct() {
+    const [user, setUser] = useState(null)
+
+    useEffect(() => {
+        verifyToken();
+        setUser(getCurrentUser());
+    }, [])
+
     const [product, setProduct] = useState(initialValue);
     const { value, description, state } = product;
     
@@ -43,30 +52,21 @@ export function CreateProduct() {
 
     const onStateChange = (state) => {
         setProduct({ ...product, "state": state });
+        console.log(state);
     }
 
     const addProductData = async () => {
         await addProduct(product);
-        history.push('/');
+        history.push('/prodList');
     }
 
     return (
         <main>
             <Ownheader />
-                <div className = "Main">
+                
+                    
                     <Container titulo="PRODUCT REGISTRATION">
-                        <section className = "main-input">
-                            {/* <Input nameLabel="Description:" value = {description} nameIcon={faAlignJustify} onChange={(e) => onValueChange(e)}/>
-                            <Input nameLabel="Unit Value:" value = {value} nameIcon={faDollarSign} onChange={(e) => onValueChange(e)}/> 
-                            startAdornment={
-                                    <InputAdornment position="start">
-                                        
-                                    </InputAdornment>
-                            }*/}
-                            
-                        </section>
-
-                        <FormGroup className={classes.container}>
+                        <FormGroup className={classes.containerStyle}>
                             <FormControl>
                                 <InputLabel htmlFor="my-input">Description</InputLabel>
                                 <Input onChange={(e) => onValueChange(e)} name="description" value={description} id="my-input" />
@@ -78,9 +78,6 @@ export function CreateProduct() {
                             </FormControl>
                             
                             {/*  
-
-                            
-
                             <Selector nameLabel="Product State:" onChange={(e) => onStateChange(e.target.value === "In-Stock")} 
                             defaultValue="In-Stock" value={estado ? "In-Stock" : "Out-of-stock"}> </Selector>
                             
@@ -101,22 +98,24 @@ export function CreateProduct() {
                                     aria-label="state"
                                     defaultValue="In-Stock"
                                     value={state ? "In-Stock" : "Out-of-stock"}>
-                                    <FormControlLabel value="In-Stock" control={<Radio color="primary" />} label="In-Stock" />
+                                    <FormControlLabel value="In-Stock" control={<Radio color="primary"/>} label="In-Stock" />
                                     <FormControlLabel value="Out-of-stock" control={<Radio color="primary" />} label="Out-of-stock" />
                                 </RadioGroup>
                             </FormControl> 
-                            
+
+                            {user && (
                             <FormControl>
                                 <Button variant="contained" onClick={(e) => addProductData()} color="primary">Save Product</Button>
                             </FormControl>
+                            )}
                         </FormGroup>
                         <div className="Buttons">
-                                <NavLink to="/"> 
+                                <NavLink to="/menu"> 
                                     <StyleButton title= "Back"></StyleButton>
                                 </NavLink>
                         </div>
                     </Container>
-                </div>
+                
             <Ownfooter />
         </main>
     )

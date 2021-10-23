@@ -1,7 +1,7 @@
 import './SalesRecord.css';
 import React, { useState, useEffect } from 'react'
 import Ownfooter from '../Footer/Ownfooter'
-import Ownheader from '../Header/Ownheader'
+import { Ownheader } from '../Header/Ownheader'
 import { NavLink } from 'react-router-dom';
 import Actualdate from '../ActualDate/Actualdate.js';
 import { Table, TableHead, TableCell, TableRow, TableBody, Button} from '@material-ui/core';

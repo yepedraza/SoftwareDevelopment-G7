@@ -1,6 +1,6 @@
 import './UserMaster.css';
 import Ownfooter from '../Footer/Ownfooter'
-import Ownheader from '../Header/Ownheader'
+import { Ownheader } from '../Header/Ownheader'
 import react, { useState, useEffect } from 'react';
 import { Form, Input, Label, FormGroup, Button, ButtonGroup, FormFeedback} from 'reactstrap';
 import { editUser } from '../../services/UsersService';

@@ -1,7 +1,7 @@
 import React from 'react'
 import Button from '../Buttons/Buttons'
 import Ownfooter from '../Footer/Ownfooter'
-import Ownheader from '../Header/Ownheader'
+import { Ownheader } from '../Header/Ownheader'
 import { NavLink } from 'react-router-dom';
 //import { faBarcode, faAlignJustify, faDollarSign} from '@fortawesome/free-solid-svg-icons'
 
@@ -23,13 +23,13 @@ const Main = () => {
                     <NavLink to="/">
                         <Button title="Main Page"/>
                     </NavLink>
-                    <NavLink to="/list">
+                    <NavLink to="/prodList">
                         <Button title="Product List"/>
                     </NavLink>
-                    <NavLink to="/add">
+                    <NavLink to="/products/add">
                         <Button title="Create Product"/>
                     </NavLink>
-                    <NavLink to="/edit/:id">
+                    <NavLink to="/products/edit">
                         <Button title="Edit Product"/>
                     </NavLink>
                     

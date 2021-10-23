@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { FormGroup, FormControl, InputLabel, Input, Button, Typography, RadioGroup, FormLabel, FormControlLabel, Radio } from '@material-ui/core';
-import { makeStyles } from '@material-ui/styles';
+import { FormGroup, FormControl, InputLabel, Input, Button, makeStyles, RadioGroup, FormLabel, FormControlLabel, Radio } from '@material-ui/core';
 import { editProduct, getProduct } from '../../services/ProductService';
 import { useHistory, useParams } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import Container from '../Container/Container';
-import Ownheader from '../Header/Ownheader'
+import { Ownheader } from '../Header/Ownheader'
 import Ownfooter from '../Footer/Ownfooter';
+import { verifyToken } from '../../services/AuthService';
+import { blue, pink } from '@material-ui/core/colors';
 //import Button from '../Buttons/Buttons';
 
 const StyleButton = require('../Buttons/Buttons').default
@@ -36,6 +37,7 @@ export function EditProduct() {
     const { id } = useParams();
 
     useEffect(() => {
+        verifyToken();
         loadProductData();
     }, [])
 
@@ -54,13 +56,13 @@ export function EditProduct() {
 
     const updateProductData = async () => {
         await editProduct(product);
-        history.push('/');
+        history.push('/prodList');
     }
 
     return (
         <main>
             <Ownheader />
-                <div className = "main">
+                <div className = "Main">
                     <Container titulo="PRODUCT EDITION">
                         <FormGroup className={classes.container}>
                             
@@ -80,7 +82,7 @@ export function EditProduct() {
                                     aria-label="state"
                                     defaultValue="In-Stock"
                                     value={state ? "In-Stock" : "Out-of-stock"}>
-                                    <FormControlLabel value="In-Stock" control={<Radio color="primary"/>} label="In-Stock" />
+                                    <FormControlLabel value="In-Stock" control={<Radio color="primary" />} label="In-Stock" />
                                     <FormControlLabel value="Out-of-stock" control={<Radio color="primary" />} label="Out-of-stock" />
                                 </RadioGroup>
                             </FormControl>
@@ -92,7 +94,7 @@ export function EditProduct() {
                         </FormGroup>
                     
                         <div className="Buttons">
-                            <NavLink to="/"> 
+                            <NavLink to="/menu"> 
                                 <StyleButton title= "Back"></StyleButton>
                             </NavLink>
                         </div>

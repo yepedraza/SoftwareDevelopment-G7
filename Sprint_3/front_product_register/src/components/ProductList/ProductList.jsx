@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react'
-import { Table, TableHead, TableCell, TableRow, TableBody, Button} from '@material-ui/core';
+import { Table, TableHead, TableCell, TableRow, TableBody, Button, makeStyles } from '@material-ui/core';
 import { getProducts, deleteProduct } from '../../services/ProductService';
-import { makeStyles } from '@material-ui/styles';
 import { Link } from 'react-router-dom';
 import Container from '../Container/Container';
 import Ownfooter from '../Footer/Ownfooter'
-import Ownheader from '../Header/Ownheader'
+import { Ownheader } from '../Header/Ownheader'
 import { NavLink } from 'react-router-dom';
+import { getCurrentUser } from '../../services/AuthService';
+
 
 const StyleButton = require('../Buttons/Buttons').default
 
@@ -30,16 +31,24 @@ const useStyles = makeStyles({
             color: '#1a497a',
             family: 'Nunito,Helvetica,Arial,sans-serif'
         }
+    },
+    button: {
+        marginInline: '20px'
+    },
+    button_add: {
+        textAlign: "right"
     }
 })
 
 export function ProductList() {
     const classes = useStyles();
 
+    const [user, setUser] = useState([])
     const [products, setProducts] = useState([])
 
     useEffect(() => {
         getAllProducts();
+        setUser(getCurrentUser());
     }, [])
 
     const getAllProducts = async () => {
@@ -80,10 +89,13 @@ export function ProductList() {
                                             <TableCell>{product.description}</TableCell>
                                             <TableCell>{product.value}</TableCell>
                                             <TableCell>{product.state ? "In-Stock" : "Out-of-stock"}</TableCell>
-                                            <TableCell>
-                                                <Button component={Link} to={`/edit/${product._id}`} color="primary">Edit</Button>
-                                                <Button color="secondary" onClick={() => deleteProductData(product._id)} >Remove</Button>
-                                            </TableCell>
+                                            {user
+                                                &&
+                                                (<TableCell>
+                                                    <Button variant="contained" component={Link} to={`products/edit/${product._id}`} color="primary">Edit</Button>
+                                                    <Button variant="contained" color="secondary" onClick={() => deleteProductData(product._id)} >Remove</Button>
+                                                </TableCell>)
+                                            }
                                         </TableRow>
                                     ))
                                 }
@@ -92,7 +104,7 @@ export function ProductList() {
                         </Table>
                     </section>
                         <div className="Buttons">
-                                <NavLink to="/"> 
+                                <NavLink to="/menu"> 
                                     <StyleButton title= "Back"></StyleButton>
                                 </NavLink>
                         </div>

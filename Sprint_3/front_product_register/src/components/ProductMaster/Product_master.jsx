@@ -1,6 +1,6 @@
 import './PM_styles.css'
 import Ownfooter from '../Footer/Ownfooter'
-import Ownheader from '../Header/Ownheader'
+import { Ownheader } from '../Header/Ownheader'
 import { NavLink } from 'react-router-dom';
 
 const Product_Master = () => {
