@@ -20,7 +20,7 @@ router.post('/',
     usersController.createUser)
 
 router.put('/:id',
-    body('fullName', 'El nombre es requerido y debe estar entre(6,100) carecteres')
+    body('fullname', 'El nombre es requerido y debe estar entre(6,100) carecteres')
         .exists()
         .isLength({ min: 5, max: 100 }),
     body('email', 'El email es requerido y debe estar entre(6,100) carecteres')

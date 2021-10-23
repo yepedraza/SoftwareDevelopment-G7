@@ -35,7 +35,7 @@ app.listen(port, () => {
 
 //ruta base de nuestra API
 app.get('/', (req, res) => {
-    res.json({ status: 200 });
+    res.json({ status: 460 });
 })
 
 //importamos todas las rutas que definimos en ./routes/index.js
