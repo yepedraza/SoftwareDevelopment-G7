@@ -74,18 +74,29 @@ header .navegacion a {
     flex-direction: row;
   }
 }
+
+.navegacion li:hover .submenu a{
+  visibility: visible;
+  transition: all 0.3s;
+  background-color: #1a497a;
+}
+
 header .enlace {
-  overflow: hidden;
+  position: relative;
+  display: inline-block;
 }
 header .enlace:target .submenu {
   max-height: 350px;
 }
 header .submenu {
+  position: absolute;
   background-color: #1a497a;
+  visibility: hidden;
   max-height: 0;
-  transition: 0.8s;
+  transition: opacity 0.8s;
 }
 header .submenu a:hover {
+  visibility: visible;
   background-color: #375b83;
 }
 
