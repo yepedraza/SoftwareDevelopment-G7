@@ -3,11 +3,10 @@ const Schema = mongoose.Schema;
 
 const SalesSchema = Schema({
     clientID: {
-        type: Number,
+        type: String,
         require: true,
         min: 0,
-        max: 999999999999999,
-        unique: true
+        max: 99999,
     },
     clientName: {
         type: String,
@@ -16,11 +15,10 @@ const SalesSchema = Schema({
         max: 60
     },
     sellerID: {
-        type: Number,
+        type: String,
         require: true,
         min: 6,
-        max: 999999999999999,
-        unique: true
+        max: 9999,
     },
     sellerName: {
         type: String,
@@ -30,16 +28,13 @@ const SalesSchema = Schema({
     },
     prouctID: {
         type: String,
-        require: true,
-        min: 6,
-        max: 100,
-        unique: true
+        require: true
     },
     amount: {
-        type: Number,
+        type: String,
         require: true,
         min: 0,
-        max: 999999999999999
+        max: 9999
     },
     date: {
         type: Date,
