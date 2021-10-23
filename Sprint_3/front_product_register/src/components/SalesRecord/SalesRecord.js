@@ -89,8 +89,6 @@ function SalesRecord() {
       await addSale(sale);
       history.push('/');
   }
-  
-
 
   return (
     <div className="App">

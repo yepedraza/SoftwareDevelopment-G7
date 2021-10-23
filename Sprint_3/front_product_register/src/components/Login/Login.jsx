@@ -32,7 +32,19 @@ const initialValue = {
 const Login = () => {
   return (
     <div className="App">
-      
+      <header>
+                <script src="https://kit.fontawesome.com/f239b2f471.js" crossorigin="anonymous"></script>
+                <div className = "MainContainer">
+                    <div className = "LeftDiv">
+                        <nav className="barra">
+                            <ul className="navegacion">
+                                <li className="enlace" id="perfil">
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
       <div class="loggin-container">
         <div class="loggin-info-container">
           <hi class="title">log in with</hi>
