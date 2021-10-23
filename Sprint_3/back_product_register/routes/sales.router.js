@@ -8,7 +8,7 @@ la interaccion entre las peticiones HTTP y la base de datos*/
 const { salesController } = require('../controllers');
 const verifyToken = require('../middlewares/verifyToken');
 
-router.get('/:id', verifyToken, salesController.getSale);
+router.get('/:id', salesController.getSale);
 
 router.get('/', salesController.getSales);
 
@@ -20,7 +20,7 @@ router.post('/',
     body('sellerName', 'El nombre del cliente, debe tener entre 5 y 60 caractéreso').exists(),
     body('prouctID', 'El identificador del prodicto vendido').exists(),
     body('amount', 'La cantidad comprada del mismo producto, entre 1 y 150 unidades').exists().isNumeric()
-    , verifyToken, salesController.createSales);
+    , salesController.createSales);
 
 //escribiendo las reglas que deben cumplir los parametros para actualizar un producto               
 router.put('/:id',
@@ -30,8 +30,8 @@ router.put('/:id',
     body('sellerName', 'El nombre del cliente, debe tener entre 5 y 60 caractéreso').exists(),
     body('prouctID', 'El identificador del prodicto vendido').exists(),
     body('amount', 'La cantidad comprada del mismo producto, entre 1 y 150 unidades').exists().isNumeric()
-    , verifyToken, salesController.updateSales);
+    , salesController.updateSales);
 
-router.delete('/:id', verifyToken, salesController.deleteSales);
+router.delete('/:id', salesController.deleteSales);
 
 module.exports = router;
