@@ -12,7 +12,7 @@ import { useHistory } from 'react-router-dom';
 import Container from '../Container/Container';
 import { addSale } from '../../services/SalesService';
 
-function getCurrentDate(separator='/'){
+function getCurrentDate(separator='-'){
 
   let newDate = new Date()
   let date = newDate.getDate();
@@ -51,7 +51,7 @@ const initialValue = {
     sellerName: '',
     prouctID: '',
     amount: '',
-    date: getCurrentDate()
+    date: "2021-01-01"
 }
 
 function SalesRecord() {
@@ -107,8 +107,8 @@ function SalesRecord() {
                 <input className = "InfoTextForm" name="sellerName" onChange={(e) => onValueChange(e)} value={sellerName} type = "text" placeholder = "Seller"></input>                
             </div>
             <form class = "InformationContainer">
-                <input class = "InfoNumberForm" name="productID" onChange={(e) => onValueChange(e)} value={productID} type = "text" placeholder = "Product Id" id = "productid"></input>
-                <input class = "InfoNumberForm" name="amount" onChange={(e) => onValueChange(e)} value={amount} type = "text" placeholder = "Product Amount" id = "productquantity"></input>
+                <input class = "InfoNumberForm" name="productID" onChange={(e) => onValueChange(e)} value={productID} type = "text" placeholder = "Product Id"></input>
+                <input class = "InfoNumberForm" name="amount" onChange={(e) => onValueChange(e)} value={amount} type = "text" placeholder = "Product Amount" ></input>
                 <input class = "Entrance" type = "button" value = "Sell" onClick={(e) => addSaleData()}/>          
             </form>
         </div>
