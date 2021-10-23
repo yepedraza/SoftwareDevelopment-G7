@@ -23,7 +23,7 @@ const Main = () => {
                     <NavLink to="/">
                         <Button title="Main Page"/>
                     </NavLink>
-                    <NavLink to="/list">
+                    <NavLink to="/prodList">
                         <Button title="Product List"/>
                     </NavLink>
                     <NavLink to="/products/add">

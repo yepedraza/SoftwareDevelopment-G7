@@ -219,11 +219,7 @@ header .navegacion a {
   margin: 0;
 }
 
-span {
-  color: #e2e2e2;
-  font-weight: 600;
-  cursor: pointer;
-}
+
 
 @media screen and (max-width: 1000px) {
   .image-container {
@@ -305,4 +301,11 @@ header .submenu a:hover {
   header .enlace:target .submenu a {
     display: block;
   }
+}
+
+element.style .span {
+
+  color: #1a497a;
+  font-weight: 600;
+  cursor: pointer;
 }

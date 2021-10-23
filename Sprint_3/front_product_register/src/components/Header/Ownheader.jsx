@@ -1,10 +1,31 @@
-import React, { Component, useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 /*import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'*/
-import { AppBar, Toolbar, makeStyles, Button, Box, ListItemText, ListItemAvatar, ListItem, Avatar } from '@material-ui/core'
+import { Button, ListItemText, ListItemAvatar, ListItem, Avatar, makeStyles } from '@material-ui/core'
 import './styleheader.css'
 //import { NavLink } from 'react-router-dom';
 import { getCurrentUser } from '../../services/AuthService';
-import { blue } from '@material-ui/core/colors';
+import { blue, deepOrange } from '@material-ui/core/colors';
+
+const useStyle = makeStyles({
+    header: {
+        background: '#111111'
+    },
+    tabs: {
+        color: '#FFFFFF',
+        marginRight: 20,
+        textDecoration: 'none',
+        fontSize: 16
+    },
+    tab_end: {
+        color: '#FFFFFF',
+        marginRight: 25,
+        textDecoration: 'none',
+        fontSize: 16,
+        alignItems: 'end'
+
+    }
+})
+
 
 const initialValue = {
     email: ""
@@ -15,6 +36,8 @@ export function Ownheader() {
     
         const [user, setUser] = useState(initialValue);
         
+        const classes = useStyle();
+
         useEffect(() => {
             setUser(getCurrentUser());
         }, []);
@@ -34,17 +57,9 @@ export function Ownheader() {
                                 <li className="enlace" id="perfil">
                                     <a href="#perfil" className="padre">
                                         <i className="fas fa-bars"></i> Options
-
-                                        {/* <ListItemAvatar>
-                                            <Avatar sx={{ bgcolor: 'blue', color: 'blue', display: 'inline'}}>
-                                            📋
-                                            </Avatar>
-                                        </ListItemAvatar> */}
                                     </a>
                                     {user && (
                                         <>
-                                            
-                                        
                                             <div className="submenu">
                                                 <a href="usuarios">Users</a>
                                                 <a href="sales">Sales</a>
@@ -57,10 +72,10 @@ export function Ownheader() {
                         </nav>
                     </div>
 
-                    
-                    <ListItem>
+                    <Button className={classes.tab_end}>
+                    <ListItem >
                          <ListItemAvatar>
-                             <Avatar sx={{ bgcolor: blue[100], color: blue[600], display: 'inline'}}>
+                             <Avatar sx={{ bgcolor:deepOrange[500], color: blue[100]}}>
                                👤
                             </Avatar>
                         </ListItemAvatar>
@@ -69,7 +84,7 @@ export function Ownheader() {
                     <Button variant="contained" onClick={() => logout()} color="secondary">
                         Logout
                     </Button>
-                    
+                    </Button>
                 </div>
             </header>
         )

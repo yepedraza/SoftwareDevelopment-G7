@@ -1,10 +1,23 @@
 import React, { useState } from 'react';
 import "./Login.css";
 //import Ownheader from "../Header/Ownheader";
-import { Grid, TextField, makeStyles, Button } from '@material-ui/core';
+import { Grid, TextField, Button, makeStyles } from '@material-ui/core';
 import Ownfooter from "../Footer/Ownfooter";
 import { NavLink } from 'react-router-dom';
 import { loginAuth } from '../../services/AuthService';
+
+const useStyles = makeStyles({
+  container: {
+      width: '300px',
+      padding: '4%',
+      margin: '100px auto 0 auto',
+  },
+  button_: {
+      color: '#FFFFFF',
+      fontSize: 20,
+      background: '#1a497a'
+  }
+})
 
 const initialValue = {
     email: '',
@@ -14,6 +27,8 @@ const initialValue = {
 export function Login() {
 
     const [credentials, setCredentials] = useState(initialValue)
+
+    const classes = useStyles();
 
     const {email, password} = credentials
 
@@ -33,22 +48,23 @@ export function Login() {
   return (
     <div className="App">
       
-      <div class="loggin-container">
-        <div class="loggin-info-container">
-          <hi class="title">log in with</hi>
-          <div class="social-login">
-            <div class="social-login-element">
+      <div className="loggin-container">
+        <div className="loggin-info-container">
+        <hi className="title">USER LOGIN </hi>
+          {/* 
+          <div className="social-login">
+            <div className="social-login-element">
               <div src="Images/google.svg" alt="google-image" srcset="" />
               <span>Google</span>
             </div>
-            <div class="social-login-element">
+            <div className="social-login-element">
               <div src="Images/facebook.svg" alt="google-image" srcset="" />
               <span>Facebook</span>
             </div>
           </div>
-          <p>Or</p>
+          <p>Or</p> */}
 
-          <form class="inputs-container" action="">
+          <form className="inputs-container" action="">
           <Grid container spacing={8} alignItems="flex-end">
             <Grid item md={true} sm={true} xs={true}>
                 <TextField value={email} name="email" onChange={(e) => onValueChange(e)} label="Email" type="email" fullWidth autoFocus required />
@@ -60,7 +76,7 @@ export function Login() {
             </Grid>
           </Grid>
           <Grid container justify="center" style={{ marginTop: '10px' }}>
-            <Button variant="outlined" onClick={() => startLogin()} color="primary" style={{ textTransform: "none" }}>Inicia sesión</Button>
+            <Button className={classes.button_} variant="outlined" onClick={() => startLogin()} color="primary" style={{ textTransform: "none" }}>Login</Button>
           </Grid>
             {/* <p>
               ¿Forgot password? <span class="span"> Click here</span>
@@ -72,7 +88,7 @@ export function Login() {
               ¿Don't have an account? 
             </p> */}
 
-            <NavLink to="/Signup">
+            <NavLink to="/signup">
                 <button class="btn-back"> Sign Up </button>
             </NavLink>
 

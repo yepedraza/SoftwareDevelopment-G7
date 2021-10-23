@@ -6,7 +6,8 @@ import { NavLink } from 'react-router-dom';
 import Container from '../Container/Container';
 import { Ownheader } from '../Header/Ownheader'
 import Ownfooter from '../Footer/Ownfooter';
-import { verifyToken } from '../../services/AuthService'
+import { verifyToken } from '../../services/AuthService';
+import { blue, pink } from '@material-ui/core/colors';
 //import Button from '../Buttons/Buttons';
 
 const StyleButton = require('../Buttons/Buttons').default
@@ -55,7 +56,7 @@ export function EditProduct() {
 
     const updateProductData = async () => {
         await editProduct(product);
-        history.push('/list');
+        history.push('/prodList');
     }
 
     return (
@@ -81,7 +82,7 @@ export function EditProduct() {
                                     aria-label="state"
                                     defaultValue="In-Stock"
                                     value={state ? "In-Stock" : "Out-of-stock"}>
-                                    <FormControlLabel value="In-Stock" control={<Radio color="primary"/>} label="In-Stock" />
+                                    <FormControlLabel value="In-Stock" control={<Radio color="primary" />} label="In-Stock" />
                                     <FormControlLabel value="Out-of-stock" control={<Radio color="primary" />} label="Out-of-stock" />
                                 </RadioGroup>
                             </FormControl>

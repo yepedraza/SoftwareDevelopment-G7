@@ -7,8 +7,8 @@ import Ownfooter from '../Footer/Ownfooter';
 import { Ownheader } from '../Header/Ownheader';
 import { verifyToken } from '../../services/AuthService';
 import { getCurrentUser } from '../../services/AuthService';
-//import Input from '../Inputs/Input';
 import { NavLink } from 'react-router-dom';
+//import '../Main/Main.css';
 //faBarcode, InputAdornment
 //import { faAlignJustify, faDollarSign} from '@fortawesome/free-solid-svg-icons'
 
@@ -21,7 +21,8 @@ const initialValue = {
 }
 
 const useStyles = makeStyles({
-    container: {
+    containerStyle: {
+        
         width: '50%',
         margin: '3% 0 0 25%',
         '& > *': {
@@ -51,30 +52,21 @@ export function CreateProduct() {
 
     const onStateChange = (state) => {
         setProduct({ ...product, "state": state });
+        console.log(state);
     }
 
     const addProductData = async () => {
         await addProduct(product);
-        history.push('/list');
+        history.push('/prodList');
     }
 
     return (
         <main>
             <Ownheader />
-                <div className = "Main">
+                
+                    
                     <Container titulo="PRODUCT REGISTRATION">
-                        <section className = "main-input">
-                            {/* <Input nameLabel="Description:" value = {description} nameIcon={faAlignJustify} onChange={(e) => onValueChange(e)}/>
-                            <Input nameLabel="Unit Value:" value = {value} nameIcon={faDollarSign} onChange={(e) => onValueChange(e)}/> 
-                            startAdornment={
-                                    <InputAdornment position="start">
-                                        
-                                    </InputAdornment>
-                            }*/}
-                            
-                        </section>
-
-                        <FormGroup className={classes.container}>
+                        <FormGroup className={classes.containerStyle}>
                             <FormControl>
                                 <InputLabel htmlFor="my-input">Description</InputLabel>
                                 <Input onChange={(e) => onValueChange(e)} name="description" value={description} id="my-input" />
@@ -106,11 +98,11 @@ export function CreateProduct() {
                                     aria-label="state"
                                     defaultValue="In-Stock"
                                     value={state ? "In-Stock" : "Out-of-stock"}>
-                                    <FormControlLabel value="In-Stock" control={<Radio color="primary" />} label="In-Stock" />
+                                    <FormControlLabel value="In-Stock" control={<Radio color="primary"/>} label="In-Stock" />
                                     <FormControlLabel value="Out-of-stock" control={<Radio color="primary" />} label="Out-of-stock" />
                                 </RadioGroup>
                             </FormControl> 
-                            
+
                             {user && (
                             <FormControl>
                                 <Button variant="contained" onClick={(e) => addProductData()} color="primary">Save Product</Button>
@@ -123,7 +115,7 @@ export function CreateProduct() {
                                 </NavLink>
                         </div>
                     </Container>
-                </div>
+                
             <Ownfooter />
         </main>
     )

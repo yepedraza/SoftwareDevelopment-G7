@@ -10,6 +10,11 @@ const useStyles = makeStyles({
         width: '300px',
         padding: '4%',
         margin: '100px auto 0 auto',
+    },
+    button_: {
+        color: '#FFFFFF',
+        fontSize: 20,
+        background: '#1a497a'
     }
 })
 
@@ -48,7 +53,7 @@ export function Signup() {
             <div className = "App">
                 <div class="loggin-container">
                     <div class="loggin-info-container">
-                    <hi class="title">Register</hi>
+                    <hi class="title">CREATE ACCOUNT</hi>
                     <form class="inputs-container" action="">
                         <Grid container spacing={8} error alignItems="flex-end">
                             <Grid item md={true} sm={true} xs={true}>
@@ -65,8 +70,8 @@ export function Signup() {
                                 <TextField value={password} name="password" onChange={(e) => onValueChange(e)} label="Password" type="password" fullWidth required />
                             </Grid>
                         </Grid>
-                        <Grid container justify="center" style={{ marginTop: '10px' }}>
-                            <Button variant="outlined" onClick={() => registerUser()} color="primary" style={{ textTransform: "none" }}>Registrarse</Button>
+                        <Grid container justify="center" style={{ marginTop: '15px'}}>
+                            <Button className={classes.button_} variant="outlined" onClick={() => registerUser()} style={{ textTransform: "none"}} >Registrarse</Button>
                         </Grid>
                         <NavLink to="/">
                             <button class="btn-back"> Back </button>
