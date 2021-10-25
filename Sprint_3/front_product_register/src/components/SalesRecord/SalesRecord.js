@@ -49,7 +49,7 @@ const initialValue = {
     clientName: '',
     sellerID: '',
     sellerName: '',
-    prouctID: '',
+    productID: '',
     amount: '',
     date: "2021-01-01"
 }
@@ -87,7 +87,7 @@ function SalesRecord() {
 
   const addSaleData = async () => {
       await addSale(sale);
-      history.push('/');
+      history.push('/sales');
   }
 
   return (
@@ -121,7 +121,7 @@ function SalesRecord() {
                         <TableCell>Client Name</TableCell>
                         <TableCell>Seller ID</TableCell>
                         <TableCell>Seller Name</TableCell>
-                        <TableCell>Prouct ID</TableCell>
+                        <TableCell>Product ID</TableCell>
                         <TableCell>Amount</TableCell>
                         <TableCell>Date</TableCell>
                         <TableCell></TableCell>
@@ -136,7 +136,7 @@ function SalesRecord() {
                                 <TableCell>{sale.clientName}</TableCell>
                                 <TableCell>{sale.sellerID}</TableCell>
                                 <TableCell>{sale.sellerName}</TableCell>
-                                <TableCell>{sale.prouctID}</TableCell>
+                                <TableCell>{sale.productID}</TableCell>
                                 <TableCell>{sale.amount}</TableCell>
                                 <TableCell>{sale.date}</TableCell>
                                 <TableCell>

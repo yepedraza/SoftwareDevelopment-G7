@@ -31,13 +31,13 @@ function App() {
           <Route exact path="/product_master" component={Product_Master} />
           <Route exact path="/sales" component={SalesRecord} />
           <Route exact path="/usermaster" component={UserMaster} />
-          <Route component={NotFound} /> 
           {user && (
                     <>
                         <Route exact path="/products/add" component={CreateProduct} />
                         <Route exact path="/products/edit/:id" component={EditProduct} />
                     </>
                 )}  
+          <Route component={NotFound} /> 
       </Switch>
       
     </BrowserRouter>

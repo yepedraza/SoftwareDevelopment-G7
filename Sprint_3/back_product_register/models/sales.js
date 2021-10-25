@@ -26,7 +26,7 @@ const SalesSchema = Schema({
         min: 5,
         max: 60
     },
-    prouctID: {
+    productID: {
         type: String,
         require: true
     },
