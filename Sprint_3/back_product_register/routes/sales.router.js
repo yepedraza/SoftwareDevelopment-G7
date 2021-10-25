@@ -8,7 +8,7 @@ la interaccion entre las peticiones HTTP y la base de datos*/
 const { salesController } = require('../controllers');
 const verifyToken = require('../middlewares/verifyToken');
 
-router.get('/:id', salesController.getSale);
+router.get('/:id', verifyToken, salesController.getSale);
 
 router.get('/', salesController.getSales);
 
@@ -18,9 +18,9 @@ router.post('/',
     body('clientName', 'El nombre del cliente, debe tener entre 5 y 60 caractéres').exists(),
     body('sellerID', 'Es la identificación del vendedor').exists().isNumeric(),
     body('sellerName', 'El nombre del cliente, debe tener entre 5 y 60 caractéreso').exists(),
-    body('prouctID', 'El identificador del prodicto vendido').exists(),
+    body('productoID', 'El identificador del prodicto vendido').exists(),
     body('amount', 'La cantidad comprada del mismo producto, entre 1 y 150 unidades').exists().isNumeric()
-    , salesController.createSales);
+    , verifyToken, salesController.createSales);
 
 //escribiendo las reglas que deben cumplir los parametros para actualizar un producto               
 router.put('/:id',
@@ -28,10 +28,10 @@ router.put('/:id',
     body('clientName', 'El nombre del cliente, debe tener entre 5 y 60 caractéres').exists(),
     body('sellerID', 'Es la identificación del vendedor').exists().isNumeric(),
     body('sellerName', 'El nombre del cliente, debe tener entre 5 y 60 caractéreso').exists(),
-    body('prouctID', 'El identificador del prodicto vendido').exists(),
+    body('productoID', 'El identificador del prodicto vendido').exists(),
     body('amount', 'La cantidad comprada del mismo producto, entre 1 y 150 unidades').exists().isNumeric()
-    , salesController.updateSales);
+    , verifyToken, salesController.updateSales);
 
-router.delete('/:id', salesController.deleteSales);
+router.delete('/:id', verifyToken, salesController.deleteSales);
 
 module.exports = router;
