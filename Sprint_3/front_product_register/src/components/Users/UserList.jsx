@@ -93,11 +93,6 @@ export function UserList() {
                             
                         </Table>
                     </section>
-                        <div className="Buttons">
-                                <NavLink to="/menu"> 
-                                    <StyleButton title= "Back"></StyleButton>
-                                </NavLink>
-                        </div>
                     </Container>
                 </div>
             <Ownfooter />

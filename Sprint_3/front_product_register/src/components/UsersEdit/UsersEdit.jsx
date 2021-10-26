@@ -84,7 +84,7 @@ export function EditUsers() {
                         </FormGroup>
                     
                         <div className="Buttons">
-                            <NavLink to="/menu"> 
+                            <NavLink to="/product_master"> 
                                 <StyleButton title= "Back"></StyleButton>
                             </NavLink>
                         </div>
