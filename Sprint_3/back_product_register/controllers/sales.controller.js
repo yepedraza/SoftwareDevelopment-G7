@@ -51,6 +51,7 @@ const createSales = async (req, res) => {
         return res.status(400).json({
             error: {
                 code: 404,
+                message: "Alguna mierda" + err.message,
                 errors: errors.array()
             }
         });
@@ -82,6 +83,7 @@ const updateSales = async (req, res) => {
         return res.status(400).json({
             error: {
                 code: 404,
+                message: "Quiza sea este" + err.message,
                 errors: errors.array()
             }
         });
@@ -93,7 +95,7 @@ const updateSales = async (req, res) => {
             clientName: req.body.clientName,
             sellerID: req.body.sellerID,
             sellerName: req.body.sellerName,
-            productID: req.body.productID,
+            productoID: req.body.productoID,
             amount: req.body.amount
         }
         await SalesSchema.findByIdAndUpdate(req.params.id, newSales);

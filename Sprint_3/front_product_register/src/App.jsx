@@ -11,7 +11,9 @@ import { getCurrentUser } from './services/AuthService';
 import Main from './components/Main/Main';
 import SalesRecord  from './components/SalesRecord/SalesRecord';
 import { Product_Master } from './components/ProductMaster/Product_master';
+import { UserList } from './components/Users/UserList';
 import UserMaster from './components/UserMaster/UserMaster';
+import { EditUsers } from './components/UsersEdit/UsersEdit';
 
 function App() {
 
@@ -28,16 +30,17 @@ function App() {
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/menu" component={Main} />
           <Route exact path="/prodList" component={ProductList} />
-          <Route exact path="/product_master" component={Product_Master} />
+          <Route exact path="/product_master" component={UserList} />
           <Route exact path="/sales" component={SalesRecord} />
           <Route exact path="/usermaster" component={UserMaster} />
-          <Route component={NotFound} /> 
           {user && (
                     <>
                         <Route exact path="/products/add" component={CreateProduct} />
                         <Route exact path="/products/edit/:id" component={EditProduct} />
+                        <Route exact path="/users/edit/:id" component={EditUsers} />
                     </>
                 )}  
+          <Route component={NotFound} /> 
       </Switch>
       
     </BrowserRouter>

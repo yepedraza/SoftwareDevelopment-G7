@@ -11,6 +11,7 @@ import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
 import Container from '../Container/Container';
 import { addSale } from '../../services/SalesService';
+import { verifyToken } from '../../services/AuthService';
 
 function getCurrentDate(separator='-'){
 
@@ -49,7 +50,7 @@ const initialValue = {
     clientName: '',
     sellerID: '',
     sellerName: '',
-    prouctID: '',
+    productoID: '',
     amount: '',
     date: "2021-01-01"
 }
@@ -60,6 +61,7 @@ function SalesRecord() {
   const [sales, setSales] = useState([])
 
   useEffect(() => {
+    verifyToken();
     getAllSales();
   }, [])
 
@@ -78,7 +80,7 @@ function SalesRecord() {
   }
   
   const [sale, setSale] = useState(initialValue);
-  const { clientID, clientName, sellerID, sellerName, productID, amount, date} = sale;
+  const { clientID, clientName, sellerID, sellerName, productoID, amount, date} = sale;
   let history = useHistory();
 
   const onValueChange = (e) => {
@@ -87,7 +89,7 @@ function SalesRecord() {
 
   const addSaleData = async () => {
       await addSale(sale);
-      history.push('/');
+      history.push('/sales');
   }
 
   return (
@@ -107,7 +109,7 @@ function SalesRecord() {
                 <input className = "InfoTextForm" name="sellerName" onChange={(e) => onValueChange(e)} value={sellerName} type = "text" placeholder = "Seller"></input>                
             </div>
             <form class = "InformationContainer">
-                <input class = "InfoNumberForm" name="productID" onChange={(e) => onValueChange(e)} value={productID} type = "text" placeholder = "Product Id"></input>
+                <input class = "InfoNumberForm" name="productoID" onChange={(e) => onValueChange(e)} value={productoID} type = "text" placeholder = "Product Id"></input>
                 <input class = "InfoNumberForm" name="amount" onChange={(e) => onValueChange(e)} value={amount} type = "text" placeholder = "Product Amount" ></input>
                 <input class = "Entrance" type = "button" value = "Sell" onClick={(e) => addSaleData()}/>          
             </form>
@@ -121,7 +123,7 @@ function SalesRecord() {
                         <TableCell>Client Name</TableCell>
                         <TableCell>Seller ID</TableCell>
                         <TableCell>Seller Name</TableCell>
-                        <TableCell>Prouct ID</TableCell>
+                        <TableCell>Product ID</TableCell>
                         <TableCell>Amount</TableCell>
                         <TableCell>Date</TableCell>
                         <TableCell></TableCell>
@@ -136,11 +138,10 @@ function SalesRecord() {
                                 <TableCell>{sale.clientName}</TableCell>
                                 <TableCell>{sale.sellerID}</TableCell>
                                 <TableCell>{sale.sellerName}</TableCell>
-                                <TableCell>{sale.prouctID}</TableCell>
+                                <TableCell>{sale.productoID}</TableCell>
                                 <TableCell>{sale.amount}</TableCell>
                                 <TableCell>{sale.date}</TableCell>
                                 <TableCell>
-                                    <Button component={Link} to={`/edit/${sale._id}`} color="primary">Edit</Button>
                                     <Button color="secondary" onClick={() => deleteSaleData(sale._id)} >Remove</Button>
                                 </TableCell>
                             </TableRow>

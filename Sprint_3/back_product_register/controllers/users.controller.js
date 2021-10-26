@@ -91,12 +91,16 @@ const updateUser = async (req, res) => {
             }
         });
     }
+    /*let newUser = req.body
+    let salt = await bcrypt.genSalt(10);
+    newUser.password = await bcrypt.hash(newUser.password, salt);*/
     try {
+        let salt = await bcrypt.genSalt(10);
         let newUser = {
             id: req.params.id,
             fullName: req.body.fullname,
             email: req.body.email,
-            password: req.body.password
+            password: await bcrypt.hash(req.body.password, salt)
         }
         await UserSchema.findByIdAndUpdate(req.params.id, newUser);
         return res.status(201).json({ data: newUser })
